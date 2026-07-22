@@ -1,0 +1,88 @@
+<footer class="unified-footer-wrapper">
+    <div class="footer-bg-container"></div>
+    <div class="footer-card" style="position: relative; z-index: 2; padding: 0;">
+      <div class="premium-footer-bento">
+        
+        <!-- Brand Bento -->
+        <div class="bento-box footer-brand-bento">
+          <div class="brand-logo-icon" style="transform: scale(1.8); transform-origin: left center; margin-bottom: 36px;">
+            <div class="logo-box box-1"></div>
+            <div class="logo-box box-2"></div>
+            <div class="logo-box box-main">
+              <div class="logo-icon-text">B<span class="small-s">s</span></div>
+            </div>
+          </div>
+          <h3 class="pf-mission">The outcome-first school for the next generation of creative practitioners.</h3>
+          <p class="pf-desc">Run by active practitioners, structured around real client work.</p>
+          
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/braandschool/" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://www.linkedin.com/school/braandschool/posts/?feedView=all" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.youtube.com/@braandschool" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://wa.me/919083596000" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Links Bento -->
+        <div class="bento-box footer-links-bento">
+          <div class="pf-nav-col">
+            <div class="pf-nav-header">Programs</div>
+            <a href="course.html" onclick="sessionStorage.setItem('selected-course', 'braanding');" class="pf-link">Brand Design</a>
+            <a href="course.html" onclick="sessionStorage.setItem('selected-course', 'marketing');" class="pf-link">Marketing Strategy</a>
+            <a href="course.html" onclick="sessionStorage.setItem('selected-course', 'creator');" class="pf-link">Content Creation</a>
+            <a href="course.html" onclick="sessionStorage.setItem('selected-course', 'creator');" class="pf-link">Motion & Video</a>
+          </div>
+          <div class="pf-nav-col">
+            <div class="pf-nav-header">School</div>
+            <a href="index.html#manifesto" class="pf-link">Manifesto</a>
+            <a href="index.html#testimonials" class="pf-link">Testimonials</a>
+            <a href="index.html#faq" class="pf-link">FAQ</a>
+            <a href="index.html#apply" class="pf-link" style="color: var(--green);">Apply Now <span class="pf-arr">↗</span></a>
+          </div>
+        </div>
+
+        <!-- Contact Bento -->
+        <div class="bento-box footer-contact-bento">
+          <div class="pf-nav-header">Contact</div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Call Us</span>
+              <a href="tel:+919083596000">+91 90835-96000</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Email Us</span>
+              <a href="mailto:hello@braandschool.com">hello@braandschool.com</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Address</span>
+              <span>2nd Floor, Pradhan Bldg,<br>Siliguri, WB 734001</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pf-footer-bottom">
+        <div class="pf-fb-left">© 2026 Braand School · All rights reserved</div>
+        <div class="pf-fb-right">
+          <a href="index.html#apply" class="footer-apply-btn" style="background: var(--green); color: #000; padding: 12px 16px 12px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.3s ease;">
+            Request Admission
+            <span class="btn-badge" style="display: inline-block; background: #000; color: var(--green); padding: 8px 16px; border-radius: 100px; font-size: 11px; font-weight: 800;">APPLY</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PL8DSP66');</script>
+  <!-- End Google Tag Manager -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Braand School</title>
+  <meta name="description" content="Read insights, articles, and design updates from Braand School practitioners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Shared Resources -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <style>
+    :root {
+      --gray3: #3a3a3a;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .blog-wrap {
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      background-color: #050505;
+      padding: 160px 0 100px;
+      overflow: hidden;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(5, 5, 5, 0) 10%, #050505 90%),
+        radial-gradient(rgba(167, 254, 43, 0.04) 1.5px, transparent 1.5px);
+      background-size: 100% 100%, 24px 24px;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .blog-bg-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(167, 254, 43, 0.15) 0%, rgba(167, 254, 43, 0.05) 50%, transparent 75%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .blog-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .blog-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #3b6600 !important;
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 100px;
+      background: rgba(167, 254, 43, 0.15) !important;
+    }
+
+    .blog-title {
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .blog-title em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    .blog-subtitle {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: #a1a1aa;
+      max-width: 600px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    /* Glassmorphism empty state card */
+    .empty-blog-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 60px 40px;
+      max-width: 500px;
+      margin: 0 auto;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .empty-blog-card:hover {
+      border-color: rgba(167, 254, 43, 0.2);
+      box-shadow: 0 30px 60px rgba(167, 254, 43, 0.05);
+    }
+
+    .empty-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      color: var(--green);
+      opacity: 0.8;
+    }
+
+    .empty-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .empty-text {
+      font-size: 14px;
+      color: #71717a;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(167, 254, 43, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .blog-wrap {
+        padding: 120px 0 60px;
+      }
+      .blog-container {
+        padding: 0 24px;
+      }
+    }
+  
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8DSP66"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/index.html" class="nav-logo">
+      <div class="brand-logo-icon">
+        <div class="logo-box box-1"></div>
+        <div class="logo-box box-2"></div>
+        <div class="logo-box box-main">
+          <div class="logo-icon-text">B<span class="small-s">s</span></div>
+        </div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li class="nav-dropdown-wrapper">
+        <div style="display: flex; align-items: center; gap: 4px;">
+          <a href="/courses" class="nav-courses-link" style="padding-right: 0;">
+            Our Courses
+          </a>
+          <button type="button" class="nav-dropdown-toggle" id="desktop-courses-toggle" aria-label="Toggle Courses Dropdown" style="background: none; border: none; color: inherit; cursor: pointer; padding: 4px; display: flex; align-items: center; opacity: 0.7; transition: opacity 0.2s;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" id="desktop-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri">Digital Marketing Course</a>
+        </div>
+      </li>
+      <style>
+        .nav-dropdown-wrapper {
+          position: relative;
+        }
+        .nav-dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%) translateY(10px);
+          margin-top: 25px;
+          background: rgba(15, 15, 15, 0.95);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          min-width: 200px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          z-index: 200;
+        }
+        .nav-dropdown-menu.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown-menu a {
+          padding: 10px 16px !important;
+          color: var(--white);
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          border-radius: 8px;
+          transition: background 0.2s, opacity 0.2s;
+          opacity: 0.8;
+          display: block;
+        }
+        .nav-dropdown-menu a:hover {
+          background: rgba(255, 255, 255, 0.1);
+          opacity: 1;
+        }
+        .nav-dropdown-toggle:hover {
+          opacity: 1 !important;
+        }
+      
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggleBtn = document.getElementById('desktop-courses-toggle');
+          const submenu = document.getElementById('desktop-courses-submenu');
+          if (toggleBtn && submenu) {
+            toggleBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              submenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+              if (!submenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                submenu.classList.remove('open');
+              }
+            });
+          }
+        });
+      </script>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html" class="active-link" style="color: var(--green) !important;">Our Blogs</a></li>
+      <li><a href="/contact-us/">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="nav-cta">Enroll Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="nav-logo">
+        <div class="brand-logo-icon">
+          <div class="logo-box box-1"></div>
+          <div class="logo-box box-2"></div>
+          <div class="logo-box box-main">
+            <div class="logo-icon-text">B<span class="small-s">s</span></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="mobile-menu-close" style="background:none; border:none; color:var(--white); padding: 5px; cursor: pointer;">
+        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="/index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown-group">
+        <div class="mobile-nav-item-wrap">
+          <a href="/courses" class="mobile-nav-item" id="mobile-courses-link">Courses</a>
+          <button type="button" class="mobile-nav-toggle" id="mobile-courses-toggle" aria-label="Toggle Courses">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-submenu" id="mobile-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri" class="mobile-sub-item">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri" class="mobile-sub-item">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri" class="mobile-sub-item">Digital Marketing Course</a>
+        </div>
+      </div>
+
+      <a href="/gallery.html" class="mobile-nav-item">Gallery</a>
+      <a href="/blog.html" class="mobile-nav-item accent">Our Blogs</a>
+      <a href="/contact-us/" class="mobile-nav-item">Contact</a>
+      <button type="button" class="mobile-menu-cta" style="margin-top:20px;">Enroll Now</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const coursesToggle = document.getElementById('mobile-courses-toggle');
+      const coursesSubmenu = document.getElementById('mobile-courses-submenu');
+      const coursesLink = document.getElementById('mobile-courses-link');
+
+      if (hamburger && mobileMenu && mobileMenuClose) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+
+      if (coursesToggle && coursesSubmenu) {
+        coursesToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          coursesSubmenu.classList.toggle('open');
+          coursesToggle.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+
+  <!-- ── BLOG WRAP ── -->
+  <main class="blog-wrap">
+    <div class="blog-bg-glow"></div>
+    
+    <div class="blog-container">
+      <div class="blog-kicker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        Our Journal
+      </div>
+      
+      <h1 class="blog-title">Thoughts, ideas <em>&amp;</em> articles</h1>
+      <p class="blog-subtitle">Insights from practitioners teaching design, marketing, and the creative business at Braand School.</p>
+      
+      <div class="empty-blog-card">
+        <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+        <h2 class="empty-title">Coming Soon</h2>
+        <p class="empty-text">We are busy writing educational stories, student projects, and design case studies. Subscribe to our newsletter or check back soon.</p>
+        <a href="/index.html" class="back-btn">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="unified-footer-wrapper">
+    <div class="footer-bg-container"></div>
+    <div class="footer-card" style="position: relative; z-index: 2; padding: 0;">
+      <div class="premium-footer-bento">
+        
+        <!-- Brand Bento -->
+        <div class="bento-box footer-brand-bento">
+          <div class="brand-logo-icon" style="transform: scale(1.8); transform-origin: left center; margin-bottom: 36px;">
+            <div class="logo-box box-1"></div>
+            <div class="logo-box box-2"></div>
+            <div class="logo-box box-main">
+              <div class="logo-icon-text">B<span class="small-s">s</span></div>
+            </div>
+          </div>
+          <h3 class="pf-mission">The outcome-first school for the next generation of creative practitioners.</h3>
+          <p class="pf-desc">Run by active practitioners, structured around real client work.</p>
+          
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/braandschool/" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://www.linkedin.com/school/braandschool/posts/?feedView=all" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.youtube.com/@braandschool" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://wa.me/919083596000" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Links Bento -->
+        <div class="bento-box footer-links-bento">
+          <div class="pf-nav-col">
+            <div class="pf-nav-header">Course Topics</div>
+            <a href="/courses/digital-marketing-course-siliguri" class="pf-link">Digital Marketing Course</a>
+            <a href="/courses/graphic-design-course-siliguri" class="pf-link">Graphic Design Course</a>
+            <a href="/courses/video-motion-course-siliguri" class="pf-link">Video Editing Course</a>
+          </div>
+          <div class="pf-nav-col">
+            <a href="/blog.html" class="pf-nav-header" style="color: var(--green); text-decoration: none; display: block;">Others</a>
+            <a href="https://braandschool.com/course/blog/brand-story/" class="pf-link">Brand Stories</a>
+            <a href="https://braandschool.com/course/podcast/" class="pf-link">Podcasts</a>
+            <a href="https://braandschool.com/course/updates/" class="pf-link">BS Updates</a>
+            <a href="braandschool_com%20Privacy%20Policy.html" class="pf-link">Privacy Policy</a>
+            <a href="index.html#apply" class="pf-link" style="color: var(--green);">Apply Now <span class="pf-arr">↗</span></a>
+          </div>
+        </div>
+
+        <!-- Contact Bento -->
+        <div class="bento-box footer-contact-bento">
+          <div class="pf-nav-header">Contact</div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Call Us</span>
+              <a href="tel:+919083596000">+91 90835-96000</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Email Us</span>
+              <a href="mailto:hello@braandschool.com">hello@braandschool.com</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Address</span>
+              <span>2nd Floor, Pradhan Building,<br>Rishi Aurobindo Rd, Ward 12,<br>Hakim Para, Siliguri,<br>West Bengal 734001</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pf-footer-bottom">
+        <div class="pf-fb-left">© 2026 Braand School · All rights reserved</div>
+        <div class="pf-fb-right">
+          <a target="_blank" href="https://www.google.com/maps?q=Braand+School+-+Learn+Marketing+%7C+UI+UX+Design+%7C+Graphic+Design+Course+in+Siliguri" class="footer-apply-btn" style="background: var(--green); color: #000; padding: 12px 16px 12px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.3s ease;">
+            Get Direction
+            <span class="btn-badge" style="display: inline-block; background: #000; color: var(--green); padding: 8px 16px; border-radius: 100px; font-size: 11px; font-weight: 800;">MAP</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    @media (max-width: 600px) {
+      .modal-form {
+        gap: 12px !important;
+      }
+      .modal-form .form-group {
+        gap: 6px !important;
+      }
+      .modal-form .form-group input,
+      .modal-form .form-group select {
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        height: auto !important;
+      }
+      .modal-form .modal-submit-btn {
+        padding: 14px !important;
+        margin-top: 8px !important;
+        font-size: 11px !important;
+      }
+      .modal-content {
+        padding: 24px 20px !important;
+      }
+    }
+  </style>
+
+
+  <style>
+    .custom-select-option:active,
+    .custom-select-option.touch-hover {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+    .custom-select-option.selected {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+  </style>
+
+</body>
+
+</html>

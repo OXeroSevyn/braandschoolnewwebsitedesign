@@ -1,0 +1,202 @@
+{
+  "graphic-design-course.html": [
+    {
+      "name": "Riya Sengupta",
+      "role": "PERFORMANCE MARKETER - ZENITH DIGITAL",
+      "src": "images/courses/brand-design/testimonials/student_1.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_1.png'",
+      "quote": "\"I was rejecting interviews three months in. Braand turned me from another commerce grad into someone agencies fight for.\"",
+      "badge_html": ""
+    },
+    {
+      "name": "Amar deep Rai",
+      "role": "",
+      "src": "images/courses/brand-design/testimonials/student_2.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_2.png'",
+      "quote": "This is the best and perfect institute for anyone who wants to boost their professional carrier in digital marketing, graphic design, especially the brand of one's businesses. Perfect environment, experience faculty, neat and well equipped classrooms, very supportive and amiable staffs. All the best braand school.",
+      "badge_html": ""
+    },
+    {
+      "name": "Priya Das",
+      "role": "",
+      "src": "images/courses/brand-design/testimonials/student_3.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_3.png'",
+      "quote": "HIGHLY RECOMMENDED! A HIDDEN GEM FOR ALL THE CURIOUS LEARNERS WHO WANNA EXPERIENCE FROM PIXELS TO BRILLIANCE!The courses provided here is always backed up with some real life experiences which help the learning more relatable. The trainings here are innovative, informative and instructiv where the faculty helps you to unlock your creativity.",
+      "badge_html": ""
+    },
+    {
+      "name": "OXero",
+      "role": "",
+      "src": "images/courses/brand-design/testimonials/student_4.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_4.png'",
+      "quote": "Braand School is a top-notch design institute in Siliguri that combines creativity with real-world skills.The instructors are industry experts who provide hands-on learning in UI/UX, graphic design, and digital marketing.The curriculum is up-to-date and dynamic, encouraging students to think outside the box and build a strong portfolio.It’s an inspiring environment that truly prepares you for a successful career in digital design.",
+      "badge_html": ""
+    },
+    {
+      "name": "Anjali Rai",
+      "role": "",
+      "src": "images/courses/brand-design/testimonials/student_5.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_5.png'",
+      "quote": "I had a very amazing and wonderful journey on Braand School as everyone out here is super friendly and helpful I would like to express my gratitude to each and everyone for all the efforts you have taken during the journey for me.I really appreciate the way I had been taught by everyone.I not only gained knowledge but it made me confident and thoughtful too.Thank you so much @braandschool.",
+      "badge_html": ""
+    },
+    {
+      "name": "Pritam Sarkar",
+      "role": "",
+      "src": "images/courses/brand-design/testimonials/student_6.png",
+      "onerror": "this.src='images/courses/brand-design/testimonials/avatar_6.png'",
+      "quote": "I really enjoyed the workshop at Braand School! It was fun and insightful to learn about how AI works. After speaking with the mentors, I finally got clarity on what steps to take next in my journey. It was truly a great experience.",
+      "badge_html": ""
+    }
+  ],
+  "video-editing-course.html": [
+    {
+      "name": "Riya Sengupta",
+      "role": "PERFORMANCE MARKETER - ZENITH DIGITAL",
+      "src": "images/courses/content-video/testimonials/student_1.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_1.png'",
+      "quote": "\"I was rejecting interviews three months in. Braand turned me from another commerce grad into someone agencies fight for.\"",
+      "badge_html": ""
+    },
+    {
+      "name": "Amar deep Rai",
+      "role": "",
+      "src": "images/courses/content-video/testimonials/student_2.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_2.png'",
+      "quote": "This is the best and perfect institute for anyone who wants to boost their professional carrier in digital marketing, graphic design, especially the brand of one's businesses. Perfect environment, experience faculty, neat and well equipped classrooms, very supportive and amiable staffs. All the best braand school.",
+      "badge_html": ""
+    },
+    {
+      "name": "Priya Das",
+      "role": "",
+      "src": "images/courses/content-video/testimonials/student_3.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_3.png'",
+      "quote": "HIGHLY RECOMMENDED! A HIDDEN GEM FOR ALL THE CURIOUS LEARNERS WHO WANNA EXPERIENCE FROM PIXELS TO BRILLIANCE!\n            The courses provided here is always backed up with some real life experiences which help the learning more relatable. The trainings here are innovative, informative and instructiv where the faculty helps you to unlock your creativity.",
+      "badge_html": ""
+    },
+    {
+      "name": "OXero",
+      "role": "",
+      "src": "images/courses/content-video/testimonials/student_4.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_4.png'",
+      "quote": "Braand School is a top-notch design institute in Siliguri that combines creativity with real-world skills.The instructors are industry experts who provide hands-on learning in UI/UX, graphic design, and digital marketing.The curriculum is up-to-date and dynamic, encouraging students to think outside the box and build a strong portfolio.It’s an inspiring environment that truly prepares you for a successful career in digital design.",
+      "badge_html": ""
+    },
+    {
+      "name": "Anjali Rai",
+      "role": "",
+      "src": "images/courses/content-video/testimonials/student_5.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_5.png'",
+      "quote": "I had a very amazing and wonderful journey on Braand School as everyone out here is super friendly and helpful I would like to express my gratitude to each and everyone for all the efforts you have taken during the journey for me.I really appreciate the way I had been taught by everyone.I not only gained knowledge but it made me confident and thoughtful too.Thank you so much @braandschool.",
+      "badge_html": ""
+    },
+    {
+      "name": "Pritam Sarkar",
+      "role": "",
+      "src": "images/courses/content-video/testimonials/student_6.png",
+      "onerror": "this.src='images/courses/content-video/testimonials/avatar_6.png'",
+      "quote": "I really enjoyed the workshop at Braand School! It was fun and insightful to learn about how AI works. After speaking with the mentors, I finally got clarity on what steps to take next in my journey. It was truly a great experience.",
+      "badge_html": ""
+    }
+  ],
+  "digital-marketing-course.html": [
+    {
+      "name": "Riya Sengupta",
+      "role": "PERFORMANCE MARKETER - ZENITH DIGITAL",
+      "src": "images/courses/business-marketing/testimonials/student_1.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_1.png'",
+      "quote": "\"I was rejecting interviews three months in. Braand turned me from another commerce grad into someone agencies fight for.\"",
+      "badge_html": ""
+    },
+    {
+      "name": "Amar deep Rai",
+      "role": "",
+      "src": "images/courses/business-marketing/testimonials/student_2.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_2.png'",
+      "quote": "This is the best and perfect institute for anyone who wants to boost their professional carrier in digital marketing, graphic design, especially the brand of one's businesses. Perfect environment, experience faculty, neat and well equipped classrooms, very supportive and amiable staffs. All the best braand school.",
+      "badge_html": ""
+    },
+    {
+      "name": "Priya Das",
+      "role": "",
+      "src": "images/courses/business-marketing/testimonials/student_3.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_3.png'",
+      "quote": "HIGHLY RECOMMENDED! A HIDDEN GEM FOR ALL THE CURIOUS LEARNERS WHO WANNA EXPERIENCE FROM PIXELS TO BRILLIANCE!\n            The courses provided here is always backed up with some real life experiences which help the learning more relatable. The trainings here are innovative, informative and instructiv where the faculty helps you to unlock your creativity.",
+      "badge_html": ""
+    },
+    {
+      "name": "OXero",
+      "role": "",
+      "src": "images/courses/business-marketing/testimonials/student_4.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_4.png'",
+      "quote": "Braand School is a top-notch design institute in Siliguri that combines creativity with real-world skills.The instructors are industry experts who provide hands-on learning in UI/UX, graphic design, and digital marketing.The curriculum is up-to-date and dynamic, encouraging students to think outside the box and build a strong portfolio.It’s an inspiring environment that truly prepares you for a successful career in digital design.",
+      "badge_html": ""
+    },
+    {
+      "name": "Anjali Rai",
+      "role": "",
+      "src": "images/courses/business-marketing/testimonials/student_5.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_5.png'",
+      "quote": "I had a very amazing and wonderful journey on Braand School as everyone out here is super friendly and helpful I would like to express my gratitude to each and everyone for all the efforts you have taken during the journey for me.I really appreciate the way I had been taught by everyone.I not only gained knowledge but it made me confident and thoughtful too.Thank you so much @braandschool.",
+      "badge_html": ""
+    },
+    {
+      "name": "Pritam Sarkar",
+      "role": "",
+      "src": "images/courses/business-marketing/testimonials/student_6.png",
+      "onerror": "this.src='images/courses/business-marketing/testimonials/avatar_6.png'",
+      "quote": "I really enjoyed the workshop at Braand School! It was fun and insightful to learn about how AI works. After speaking with the mentors, I finally got clarity on what steps to take next in my journey. It was truly a great experience.",
+      "badge_html": ""
+    }
+  ],
+  "courses/digital-marketing-course-siliguri.html": [
+    {
+      "name": "Riya Sengupta",
+      "role": "PERFORMANCE MARKETER - ZENITH DIGITAL",
+      "src": "images/testimonials/student_1.png",
+      "onerror": "this.src='images/testimonials/avatar_1.png'",
+      "quote": "\"I was rejecting interviews three months in. Braand turned me from another commerce grad into someone agencies fight for.\"",
+      "badge_html": ""
+    },
+    {
+      "name": "Arjun Mehta",
+      "role": "FREELANCE MEDIA BUYER",
+      "src": "images/testimonials/student_2.png",
+      "onerror": "this.src='images/testimonials/avatar_2.png'",
+      "quote": "I came in to \"learn Instagram.\" I left running ₹3L/month in ad spend for two D2C brands. The internship made all the difference.",
+      "badge_html": "<div class=\"testi-badge\">\n<span class=\"testi-badge-label\">Was earning<br/>₹0</span>\n<span class=\"testi-badge-arrow\">→</span>\n<span class=\"testi-badge-value\">₹42,000/mo</span>\n</div>"
+    },
+    {
+      "name": "Priya Das",
+      "role": "MARKETING LEAD - LOCALBEE",
+      "src": "images/testimonials/student_3.png",
+      "onerror": "this.src='images/testimonials/avatar_3.png'",
+      "quote": "My family thought \"online course\" meant scam. After my first ₹50K client, my dad started asking me for marketing tips for his shop.",
+      "badge_html": "<div class=\"testi-badge\">\n<span class=\"testi-badge-label\">Office admin</span>\n<span class=\"testi-badge-arrow\">→</span>\n<span class=\"testi-badge-value\">₹65,000/mo</span>\n</div>"
+    },
+    {
+      "name": "Ishan Banerjee",
+      "role": "GROWTH ASSOCIATE - RAZORPAY",
+      "src": "images/testimonials/student_4.png",
+      "onerror": "this.src='images/testimonials/avatar_4.png'",
+      "quote": "The mentorship is what no YouTube tutorial can replace. Someone reviewing your ad copy at 11pm before launch — that's the level.",
+      "badge_html": ""
+    },
+    {
+      "name": "Suparna Roy",
+      "role": "INDEPENDENT MARKETER",
+      "src": "images/testimonials/student_5.png",
+      "onerror": "this.src='images/testimonials/avatar_5.png'",
+      "quote": "I was 38, switching from a teaching career. Braand didn't treat me like a college kid — they helped me build a freelance practice instead.",
+      "badge_html": "<div class=\"testi-badge\">\n<span class=\"testi-badge-label\">Teaching<br/>₹18K/mo</span>\n<span class=\"testi-badge-arrow\">→</span>\n<span class=\"testi-badge-value\">₹80,000/mo</span>\n</div>"
+    },
+    {
+      "name": "Karan Shah",
+      "role": "JUNIOR ACCOUNT MANAGER - WEBCHUTNEY",
+      "src": "images/testimonials/student_6.png",
+      "onerror": "this.src='images/testimonials/avatar_6.png'",
+      "quote": "The portfolio they help you build is what got me my first interview. The interview prep is what got me the offer.",
+      "badge_html": ""
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+=== Matches in index.html ===
+
+  </style>
+
+
+  <!-- ── STUDENT WORK SECTION (3D COVERFLOW REDESIGN) ── -->
+  <section class="work-matrix-section" id="student-work">
+    <div class="matrix-bg-container">
+      <div class="matrix-bg-glow"></div>
+    </div>
+    <div class="matrix-bg"></div>
+
+    <div class="matrix-header">
+      <div class="mh-left">
+        <div class="mh-label">
+          <span class="mh-dot"></span>
+          <span class="mh-mono">MISSION_LOG_VOL.01</span>
+        </div>
+        <h2 class="mh-title">Real <spa
+------------------------------
+
+
+    /* Blueprint details */
+    .how-visual::before {
+      content: 'SYSTEM.TRACE';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-family: var(--font-mono);
+      font-size: 6px;
+      color: rgba(167, 254, 43, 0.3);
+    }
+------------------------------
+=== Matches in assets/css/main.css ===
+No matches found.

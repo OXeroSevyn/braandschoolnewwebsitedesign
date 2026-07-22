@@ -1,0 +1,30 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# 1. Rewrite virtual asset paths under /course/ to actual root directories
+RewriteRule ^course/assets/(.*)$ /assets/$1 [L,NC]
+RewriteRule ^course/images/(.*)$ /images/$1 [L,NC]
+RewriteRule ^course/uploads/(.*)$ /uploads/$1 [L,NC]
+
+# 2. Rewrite virtual course page URLs to physical HTML files in the /courses/ directory
+RewriteRule ^course/graphic-design-course-siliguri/?$ /courses/graphic-design-course.html [L,NC]
+RewriteRule ^course/graphic-design-course/?$ /courses/graphic-design-course.html [L,NC]
+
+RewriteRule ^course/video-motion-course-siliguri/?$ /courses/video-editing-course.html [L,NC]
+RewriteRule ^course/video-motion-course/?$ /courses/video-editing-course.html [L,NC]
+
+RewriteRule ^course/digital-marketing-course-siliguri/?$ /courses/digital-marketing-course.html [L,NC]
+RewriteRule ^course/digital-marketing-course/?$ /courses/digital-marketing-course.html [L,NC]
+
+RewriteRule ^course/ai-for-everyone-siliguri/?$ /courses/ai-for-everyone.html [L,NC]
+RewriteRule ^course/ai-for-everyone/?$ /courses/ai-for-everyone.html [L,NC]
+
+RewriteRule ^course/ar-vr-course-siliguri/?$ /courses/ar-vr-course.html [L,NC]
+RewriteRule ^course/ar-vr-course/?$ /courses/ar-vr-course.html [L,NC]
+
+RewriteRule ^course/the-digital-art-course-siliguri/?$ /courses/the-digital-art-course.html [L,NC]
+RewriteRule ^course/the-digital-art-course/?$ /courses/the-digital-art-course.html [L,NC]
+
+RewriteRule ^course/the-ui-ux-design-course-siliguri/?$ /courses/the-ui-ux-design-course.html [L,NC]
+RewriteRule ^course/the-ui-ux-design-course/?$ /courses/the-ui-ux-design-course.html [L,NC]

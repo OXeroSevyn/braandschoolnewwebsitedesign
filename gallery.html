@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PL8DSP66');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <script>
+    if (screen.width < 768) {
+      document.write('<meta name="viewport" content="width=360">');
+    } else {
+      document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    }
+  </script>
+  <title>Our Gallery - Braand School - Braand School</title>
+  <meta name="description" content="See what life at Braand School is all about! Our gallery showcases moments of fun, learning, and celebrations that make student life special.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://braandschool.com/gallery/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="prefetch" href="uploads/life-at-bs/list.json" as="fetch" crossorigin>
+  <script>
+    /* Start manifest fetch immediately — before CSS/fonts block the network */
+    (function () {
+      const MEDIA_FOLDER = 'uploads/life-at-bs/';
+      const CACHE_KEY = 'life-at-bs-manifest-v2';
+      const FETCH_TIMEOUT_MS = 5000;
+
+      function readCache() {
+        try {
+          const raw = sessionStorage.getItem(CACHE_KEY);
+          if (!raw) return null;
+          const parsed = JSON.parse(raw);
+          return Array.isArray(parsed.items) ? parsed.items : null;
+        } catch { return null; }
+      }
+
+      function writeCache(items) {
+        try {
+          sessionStorage.setItem(CACHE_KEY, JSON.stringify({ items, at: Date.now() }));
+        } catch {}
+      }
+
+      async function fetchManifestUrl(url) {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+        try {
+          const res = await fetch(url, { signal: ctrl.signal });
+          if (!res.ok) throw new Error('bad status');
+          const data = await res.json();
+          if (!Array.isArray(data)) throw new Error('bad shape');
+          return data;
+        } finally {
+          clearTimeout(timer);
+        }
+      }
+
+      async function fetchManifest() {
+        const urls = [
+          MEDIA_FOLDER + 'list.json',
+          MEDIA_FOLDER + 'list.php'
+        ];
+        const results = await Promise.all(
+          urls.map((url) => fetchManifestUrl(url).catch(() => null))
+        );
+        const lists = results.filter((r) => Array.isArray(r));
+        if (!lists.length) return [];
+        return lists.reduce((best, cur) => (cur.length > best.length ? cur : best), []);
+      }
+
+      const cached = readCache();
+      window.__galleryBootstrap = {
+        MEDIA_FOLDER,
+        CACHE_KEY,
+        writeCache,
+        cached,
+        promise: fetchManifest().then((items) => {
+          if (items.length) writeCache(items);
+          return items;
+        })
+      };
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <style>
+    :root {
+      --gray3: #3a3a3a;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    /* Active Link styling */
+    .nav-links a.active-link {
+      color: var(--green) !important;
+      opacity: 1 !important;
+    }
+    .nav-links a.active-link::after {
+      transform: scaleX(1) !important;
+    }
+
+    /* Make body transparent so the z-index: -1 background is visible over the root canvas */
+    body {
+      background-color: transparent !important;
+    }
+    html {
+      background-color: #050505 !important;
+    }
+
+    /* Custom dark background with centered lime green radial glow */
+    .bg-system {
+      background: radial-gradient(circle at 50% 50%, rgba(167, 254, 43, 0.15) 0%, rgba(167, 254, 43, 0.05) 40%, #050505 75%) !important;
+      background-color: #050505 !important;
+      opacity: 1 !important;
+      display: block !important;
+    }
+
+    /* Subtle noise for texture */
+    .bg-system::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.15;
+      mix-blend-mode: overlay;
+    }
+
+    /* Subtle premium grid pattern */
+    .bg-system::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(167, 254, 43, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 254, 43, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      -webkit-mask-image: radial-gradient(circle at 50% 40%, black 20%, transparent 75%);
+      mask-image: radial-gradient(circle at 50% 40%, black 20%, transparent 75%);
+      pointer-events: none;
+    }
+
+    /* ── Hero Section ── */
+    .life-hero {
+      position: relative;
+      padding: 180px 40px 40px;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .hero-kicker {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      margin-bottom: 24px;
+      display: block;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .life-hero h1 {
+      font-size: clamp(42px, 8vw, 96px);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .life-hero h1 em {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      color: var(--green);
+    }
+
+    .hero-desc {
+      font-size: 20px;
+      color: rgba(245, 245, 240, 0.5);
+      line-height: 1.6;
+      max-width: 580px;
+      margin: 0 auto 50px;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(245, 245, 240, 0.4);
+    }
+
+    /* ── Section Headers ── */
+    .section-header {
+      padding: 40px 40px 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .section-header h2 span {
+      color: var(--green);
+    }
+    .section-header .section-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(245, 245, 240, 0.3);
+    }
+
+    /* ── Gallery Filter ── */
+    .gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: transparent;
+      color: rgba(245, 245, 240, 0.5);
+      border: 1px solid var(--gray2);
+      padding: 8px 18px;
+      cursor: pointer;
+      border-radius: 100px;
+      transition: all 0.3s var(--ease);
+    }
+    .filter-pill:hover {
+      color: var(--white);
+      border-color: var(--gray3);
+    }
+    .filter-pill.active {
+      color: var(--black);
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .media-count {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(245, 245, 240, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Masonry Gallery ── */
+    .masonry-gallery {
+      columns: 4;
+      column-gap: 16px;
+      padding: 0 40px 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--gray);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 0.5s var(--ease), opacity 0.5s var(--ease);
+    }
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-item:hover .gallery-img,
+    .gallery-item:hover .gallery-video {
+      transform: scale(1.05);
+    }
+
+    .gallery-img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s var(--ease), opacity 0.35s var(--ease);
+      opacity: 0;
+      background: linear-gradient(110deg, var(--gray) 8%, var(--gray2) 18%, var(--gray) 33%);
+      background-size: 200% 100%;
+      animation: shimmer 1.2s ease-in-out infinite;
+      min-height: 120px;
+    }
+    .gallery-img.is-loaded {
+      opacity: 1;
+      animation: none;
+      background: none;
+      min-height: 0;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .gallery-video {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s var(--ease);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .gallery-overlay .item-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .gallery-overlay .item-type {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    /* Video play icon */
+    .video-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .video-badge svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--white);
+      margin-left: 2px;
+    }
+
+    /* ── Loading State ── */
+    .gallery-loading {
+      text-align: center;
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--gray2);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: rgba(245, 245, 240, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Empty State ── */
+    .gallery-empty {
+      text-align: center;
+      padding: 100px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .empty-icon {
+      width: 80px;
+      height: 80px;
+      border: 2px dashed var(--gray2);
+      border-radius: 20px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .empty-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--gray3);
+      fill: none;
+      stroke-width: 1.5;
+    }
+    .gallery-empty h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .gallery-empty p {
+      font-size: 15px;
+      color: rgba(245, 245, 240, 0.4);
+      line-height: 1.6;
+    }
+    .gallery-empty code {
+      background: var(--gray);
+      color: var(--green);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+
+    /* ── Instagram CTA Section ── */
+    .insta-section {
+      padding: 80px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .insta-section h2 {
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+    .insta-section p {
+      font-size: 16px;
+      color: rgba(245, 245, 240, 0.5);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .insta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: var(--black);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 100px;
+      transition: all 0.3s var(--ease);
+    }
+    .insta-btn:hover {
+      background: rgba(167, 254, 43, 0.15);
+      border-color: var(--green);
+      color: var(--green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(167, 254, 43, 0.25);
+    }
+    .insta-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ── Lightbox Modal ── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(8, 8, 8, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s var(--ease);
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 22px;
+      transition: all 0.3s var(--ease);
+      z-index: 10;
+    }
+    .lightbox-close:hover {
+      background: rgba(167, 254, 43, 0.1);
+      border-color: var(--green);
+      color: var(--green);
+      transform: scale(1.05);
+    }
+    .lightbox-content {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      animation: lightboxFadeIn 0.35s var(--ease) forwards;
+    }
+    @keyframes lightboxFadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 20px;
+      transition: all 0.3s var(--ease);
+    }
+    .lightbox-nav:hover {
+      background: rgba(167, 254, 43, 0.1);
+      border-color: var(--green);
+      color: var(--green);
+      transform: translateY(-50%) scale(1.05);
+    }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 80px 40px;
+      border-top: 1px solid var(--gray2);
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: rgba(245, 245, 240, 0.3);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .masonry-gallery { columns: 3; }
+    }
+    @media (max-width: 768px) {
+      .life-hero { padding: 140px 20px 20px; }
+      .hero-stats { gap: 30px; }
+      .stat-number { font-size: 32px; }
+      .masonry-gallery { columns: 2; padding: 0 16px 60px; column-gap: 10px; }
+      .gallery-item { margin-bottom: 10px; border-radius: 8px; }
+      .section-header { padding: 20px 20px 20px; flex-direction: column; gap: 8px; }
+      .gallery-controls { padding: 0 20px 20px; }
+      .insta-section { padding: 60px 20px; }
+    }
+    @media (max-width: 480px) {
+      .masonry-gallery { columns: 2; }
+      .life-hero h1 { font-size: 36px; }
+    }
+  
+    /* ── PREMIUM BENTO FOOTER STYLES ── */
+    .footer-bg-container {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 25%),
+                  radial-gradient(circle at 50% 100%, rgba(167, 254, 43, 0.15) 0%, rgba(167, 254, 43, 0.05) 50%, #050505 80%);
+      background-color: #050505;
+    }
+
+    .footer-bg-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.15;
+      mix-blend-mode: overlay;
+    }
+
+    .footer-bg-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(167, 254, 43, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 254, 43, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .unified-footer-wrapper {
+      position: relative;
+      background: #080808;
+      padding: 40px 20px 20px;
+      margin-top: 80px;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: left;
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    .premium-footer-bento {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .bento-box {
+      /* Box styling removed as requested */
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .footer-brand-bento {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 450px;
+    }
+    
+    .pf-mission {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+    
+    .pf-desc {
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0 0 30px 0;
+    }
+    
+    .pf-socials {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .pf-social-btn {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(144, 244, 18, 0.4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      transition: all 0.3s ease;
+    }
+    
+    .pf-social-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1.5;
+    }
+    
+    .pf-social-btn:hover {
+      background: var(--green);
+      color: #000;
+      border-color: var(--green);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(144, 244, 18, 0.2);
+    }
+    
+    .footer-links-bento {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .pf-nav-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+    
+    .pf-nav-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .pf-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    
+    .pf-link:hover {
+      color: #fff;
+      transform: translateX(4px);
+    }
+    
+    .pf-arr {
+      font-size: 14px;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .pf-link:hover .pf-arr {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .footer-contact-bento {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .pf-contact-item {
+      display: flex;
+      
+      gap: 16px;
+    }
+    
+    .pf-contact-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #d4ff70, #90F412);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pf-contact-icon::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.6;
+    }
+    
+    .pf-contact-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #111;
+      stroke-width: 2;
+      fill: none;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .pf-contact-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .pf-contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #a7fe2b;
+    }
+    
+    .pf-contact-text a, .pf-contact-text span:not(.pf-contact-label) {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    
+
+    
+    .pf-footer-bottom {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .pf-fb-left {
+      color: rgba(255,255,255,0.3);
+      font-size: 13px;
+    }
+    
+    .pf-apply-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .pf-apply-btn:hover {
+      color: var(--green);
+    }
+    
+    .pf-btn-badge {
+      background: #fff;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 800;
+      transition: all 0.3s ease;
+    }
+    
+    .pf-apply-btn:hover .pf-btn-badge {
+      background: var(--green);
+    }
+    
+    @media (max-width: 900px) {
+      .premium-footer-bento {
+        grid-template-columns: 1fr;
+      }
+      .bento-box {
+        padding: 30px;
+      }
+    }
+    @media (max-width: 600px) {
+      .apply-grid {
+        gap: 24px;
+      }
+      .apply-desc {
+        margin: 0 auto 16px;
+      }
+      .unified-footer-wrapper {
+        padding: 24px 16px 16px !important;
+        margin-top: 40px !important;
+      }
+      .premium-footer-bento {
+        gap: 16px !important;
+      }
+      .premium-footer-bento .bento-box {
+        padding: 20px !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        border-radius: 16px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .footer-brand-bento .brand-logo-icon {
+        transform: scale(1.3) !important;
+        margin-bottom: 20px !important;
+        transform-origin: left center !important;
+      }
+      .pf-mission {
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.3 !important;
+      }
+      .pf-desc {
+        font-size: 13px !important;
+        margin-bottom: 16px !important;
+      }
+      .pf-socials {
+        gap: 10px !important;
+      }
+      .pf-social-btn {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 10px !important;
+      }
+      .pf-social-btn svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+      .footer-links-bento {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+      }
+      .pf-nav-col {
+        gap: 12px !important;
+      }
+      .pf-nav-header {
+        font-size: 10px !important;
+        margin-bottom: 4px !important;
+      }
+      .pf-link {
+        font-size: 14px !important;
+      }
+      .footer-contact-bento {
+        gap: 14px !important;
+      }
+      .pf-contact-item {
+        gap: 12px !important;
+      }
+      .pf-contact-icon {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 10px !important;
+      }
+      .pf-contact-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+      .pf-contact-text {
+        gap: 2px !important;
+      }
+      .pf-contact-text a, .pf-contact-text span {
+        font-size: 13px !important;
+      }
+      .pf-footer-bottom {
+        margin-top: 16px !important;
+        padding-top: 16px !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        gap: 16px !important;
+        text-align: center !important;
+      }
+      .pf-fb-left {
+        font-size: 12px !important;
+        color: rgba(255,255,255,0.4) !important;
+      }
+      .pf-fb-right {
+        width: 100% !important;
+      }
+      .footer-apply-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+      }
+    }
+
+  
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8DSP66"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Unified Background System -->
+  <div class="bg-system">
+    <div class="bg-glow"></div>
+    <div class="bg-pattern"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="/index.html" class="nav-logo">
+      <div class="brand-logo-icon">
+        <div class="logo-box box-1"></div>
+        <div class="logo-box box-2"></div>
+        <div class="logo-box box-main">
+          <div class="logo-icon-text">B<span class="small-s">s</span></div>
+        </div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li class="nav-dropdown-wrapper">
+        <div style="display: flex; align-items: center; gap: 4px;">
+          <a href="/courses" class="nav-courses-link" style="padding-right: 0;">
+            Our Courses
+          </a>
+          <button type="button" class="nav-dropdown-toggle" id="desktop-courses-toggle" aria-label="Toggle Courses Dropdown" style="background: none; border: none; color: inherit; cursor: pointer; padding: 4px; display: flex; align-items: center; opacity: 0.7; transition: opacity 0.2s;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" id="desktop-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri">Digital Marketing Course</a>
+        </div>
+      </li>
+      <style>
+        .nav-dropdown-wrapper {
+          position: relative;
+        }
+        .nav-dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%) translateY(10px);
+          margin-top: 25px;
+          background: rgba(15, 15, 15, 0.95);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          min-width: 200px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          z-index: 200;
+        }
+        .nav-dropdown-menu.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown-menu a {
+          padding: 10px 16px !important;
+          color: var(--white);
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          border-radius: 8px;
+          transition: background 0.2s, opacity 0.2s;
+          opacity: 0.8;
+          display: block;
+        }
+        .nav-dropdown-menu a:hover {
+          background: rgba(255, 255, 255, 0.1);
+          opacity: 1;
+        }
+        .nav-dropdown-toggle:hover {
+          opacity: 1 !important;
+        }
+      
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggleBtn = document.getElementById('desktop-courses-toggle');
+          const submenu = document.getElementById('desktop-courses-submenu');
+          if (toggleBtn && submenu) {
+            toggleBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              submenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+              if (!submenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                submenu.classList.remove('open');
+              }
+            });
+          }
+        });
+      </script>
+      <li><a href="/gallery.html" class="active-link">Gallery</a></li>
+      <li><a href="/blog.html">Our Blogs</a></li>
+      <li><a href="/contact-us/">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cta">Enroll Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="nav-logo">
+        <div class="brand-logo-icon">
+          <div class="logo-box box-1"></div>
+          <div class="logo-box box-2"></div>
+          <div class="logo-box box-main">
+            <div class="logo-icon-text">B<span class="small-s">s</span></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="mobile-menu-close" style="background:none; border:none; color:var(--white); padding: 5px; cursor: pointer;">
+          <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="/index.html" class="mobile-nav-item accent">Home</a>
+      
+      <div class="mobile-nav-dropdown-group">
+        <div class="mobile-nav-item-wrap">
+          <a href="/courses" class="mobile-nav-item" id="mobile-courses-link">Courses</a>
+          <button type="button" class="mobile-nav-toggle" id="mobile-courses-toggle" aria-label="Toggle Courses">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-submenu" id="mobile-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri" class="mobile-sub-item">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri" class="mobile-sub-item">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri" class="mobile-sub-item">Digital Marketing Course</a>
+        </div>
+      </div>
+
+      <a href="/gallery.html" class="mobile-nav-item">Gallery</a>
+      <a href="/blog.html" class="mobile-nav-item">Our Blogs</a>
+      <a href="/contact-us/" class="mobile-nav-item">Contact</a>
+      <button type="button" class="mobile-menu-cta" style="margin-top:20px;">Enroll Now</button>
+    </div>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const coursesToggle = document.getElementById('mobile-courses-toggle');
+    const coursesSubmenu = document.getElementById('mobile-courses-submenu');
+    const coursesLink = document.getElementById('mobile-courses-link');
+
+    if(hamburger && mobileMenu) {
+      hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    if(mobileMenuClose && mobileMenu) {
+      mobileMenuClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+
+    function toggleCoursesMenu(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (coursesToggle) coursesToggle.classList.toggle('open');
+      if (coursesSubmenu) coursesSubmenu.classList.toggle('open');
+    }
+
+    if(coursesToggle) {
+      coursesToggle.addEventListener('click', toggleCoursesMenu);
+    }
+    
+
+
+    // Close menu when clicking regular links
+    const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-item, .mobile-sub-item');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link.id !== 'mobile-courses-link') {
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  });
+</script>
+</div>
+
+  <!-- ── Hero ── -->
+  <header class="life-hero">
+    <span class="hero-kicker">The Community</span>
+    <h1>Where creators<br>become <em>colleagues.</em></h1>
+    <p class="hero-desc">At Braand School, learning isn't just about the tools — it's about the late-night sessions, the community crits, and the people you'll build the future with.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number" id="stat-media">0</div>
+        <div class="stat-label">Moments captured</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Months of energy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2.1K+</div>
+        <div class="stat-label">Community members</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Section Header ── -->
+  <div class="section-header">
+    <h2>The <span>Gallery</span></h2>
+    <span class="section-kicker">Latest Moments</span>
+  </div>
+
+  <!-- ── Filter Controls ── -->
+  <div class="gallery-controls">
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="image">Photos</button>
+      <button class="filter-pill" data-filter="video">Videos</button>
+    </div>
+    <span class="media-count" id="media-count"></span>
+  </div>
+
+  <!-- ── Gallery Loading State ── -->
+  <div class="gallery-loading" id="gallery-loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading gallery...</div>
+  </div>
+
+  <!-- ── Gallery Empty State ── -->
+  <div class="gallery-empty" id="gallery-empty" style="display:none;">
+    <div class="empty-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h3>Gallery is waiting for content</h3>
+    <p>Drop your images and videos into the <code>uploads/life-at-bs/</code> folder and they'll appear here automatically. Supports <strong>.webp, .jpg, .png, .gif, .mp4</strong> and more.</p>
+  </div>
+
+  <!-- ── Masonry Gallery ── -->
+  <div class="masonry-gallery" id="masonry-gallery" style="display:none;"></div>
+
+  <!-- ── Instagram CTA ── -->
+  <section class="insta-section">
+    <h2>Follow the <span style="color:var(--green)">journey</span></h2>
+    <p>Our story unfolds every day on Instagram. Follow @braandschool for behind-the-scenes content, student spotlights, and the creative energy that defines us.</p>
+    <a href="https://www.instagram.com/braandschool/" target="_blank" rel="noopener" class="insta-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      @braandschool
+    </a>
+  </section>
+
+        <footer class="unified-footer-wrapper">
+    <div class="footer-bg-container"></div>
+    <div class="footer-card" style="position: relative; z-index: 2; padding: 0;">
+      <div class="premium-footer-bento">
+        
+        <!-- Brand Bento -->
+        <div class="bento-box footer-brand-bento">
+          <div class="brand-logo-icon" style="transform: scale(1.8); transform-origin: left center; margin-bottom: 36px;">
+            <div class="logo-box box-1"></div>
+            <div class="logo-box box-2"></div>
+            <div class="logo-box box-main">
+              <div class="logo-icon-text">B<span class="small-s">s</span></div>
+            </div>
+          </div>
+          <h3 class="pf-mission">The outcome-first school for the next generation of creative practitioners.</h3>
+          <p class="pf-desc">Run by active practitioners, structured around real client work.</p>
+          
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/braandschool/" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://www.linkedin.com/school/braandschool/posts/?feedView=all" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.youtube.com/@braandschool" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://wa.me/919083596000" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Links Bento -->
+        <div class="bento-box footer-links-bento">
+          <div class="pf-nav-col">
+            <div class="pf-nav-header">Course Topics</div>
+            <a href="/courses/digital-marketing-course-siliguri" class="pf-link">Digital Marketing Course</a>
+            <a href="/courses/graphic-design-course-siliguri" class="pf-link">Graphic Design Course</a>
+            <a href="/courses/video-motion-course-siliguri" class="pf-link">Video Editing Course</a>
+          </div>
+          <div class="pf-nav-col">
+            <a href="/blog.html" class="pf-nav-header" style="color: var(--green); text-decoration: none; display: block;">Others</a>
+            <a href="https://braandschool.com/course/blog/brand-story/" class="pf-link">Brand Stories</a>
+            <a href="https://braandschool.com/course/podcast/" class="pf-link">Podcasts</a>
+            <a href="https://braandschool.com/course/updates/" class="pf-link">BS Updates</a>
+            <a href="braandschool_com%20Privacy%20Policy.html" class="pf-link">Privacy Policy</a>
+            <a href="index.html#apply" class="pf-link" style="color: var(--green);">Apply Now <span class="pf-arr">↗</span></a>
+          </div>
+        </div>
+
+        <!-- Contact Bento -->
+        <div class="bento-box footer-contact-bento">
+          <div class="pf-nav-header">Contact</div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Call Us</span>
+              <a href="tel:+919083596000">+91 90835-96000</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Email Us</span>
+              <a href="mailto:hello@braandschool.com">hello@braandschool.com</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Address</span>
+              <span>2nd Floor, Pradhan Building,<br>Rishi Aurobindo Rd, Ward 12,<br>Hakim Para, Siliguri,<br>West Bengal 734001</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pf-footer-bottom">
+        <div class="pf-fb-left">© 2026 Braand School · All rights reserved</div>
+        <div class="pf-fb-right">
+          <a target="_blank" href="https://www.google.com/maps?q=Braand+School+-+Learn+Marketing+%7C+UI+UX+Design+%7C+Graphic+Design+Course+in+Siliguri" class="footer-apply-btn" style="background: var(--green); color: #000; padding: 12px 16px 12px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.3s ease;">
+            Get Direction
+            <span class="btn-badge" style="display: inline-block; background: #000; color: var(--green); padding: 8px 16px; border-radius: 100px; font-size: 11px; font-weight: 800;">MAP</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next">&#8250;</button>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="" style="display:none;" />
+    <video class="lightbox-content" id="lightbox-video" src="" controls autoplay loop playsinline style="display:none;"></video>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+
+
+
+  <script>
+    /* ── Hero Animations ── */
+    anime.timeline({ easing: 'easeOutQuart' })
+      .add({ targets: '.hero-kicker', opacity: [0, 1], translateY: [15, 0], duration: 800, delay: 200 })
+      .add({ targets: '.life-hero h1', opacity: [0, 1], translateY: [20, 0], duration: 900 }, '-=600')
+      .add({ targets: '.hero-desc', opacity: [0, 1], translateY: [15, 0], duration: 800 }, '-=600')
+      .add({ targets: '.hero-stats', opacity: [0, 1], translateY: [15, 0], duration: 800 }, '-=500');
+
+    /* ── Gallery Logic ── */
+    const bootstrap = window.__galleryBootstrap || {};
+    const MEDIA_FOLDER = bootstrap.MEDIA_FOLDER || 'uploads/life-at-bs/';
+    const MANIFEST_CACHE_KEY = bootstrap.CACHE_KEY || 'life-at-bs-manifest-v2';
+    const EAGER_IMAGE_COUNT = 8;
+    let allMedia = [];
+    let currentFilter = 'all';
+    let lightboxIndex = 0;
+
+    function preloadImages(items, count) {
+      items.filter((m) => m.type !== 'video').slice(0, count).forEach((item) => {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = item.path || (MEDIA_FOLDER + item.name);
+      });
+    }
+
+    async function loadGallery() {
+      const loadingEl = document.getElementById('gallery-loading');
+
+      // Paint instantly from session cache while network revalidates
+      if (bootstrap.cached && bootstrap.cached.length > 0) {
+        allMedia = bootstrap.cached;
+        renderGallery(allMedia);
+        preloadImages(allMedia, EAGER_IMAGE_COUNT);
+      }
+
+      let fresh = [];
+      try {
+        fresh = bootstrap.promise ? await bootstrap.promise : [];
+      } catch {
+        fresh = [];
+      }
+
+      if (fresh.length > 0) {
+        allMedia = fresh;
+        renderGallery(allMedia);
+        preloadImages(allMedia, EAGER_IMAGE_COUNT);
+        return;
+      }
+
+      if (allMedia.length > 0) return;
+
+      if (loadingEl) loadingEl.style.display = 'none';
+      showEmptyState();
+    }
+
+    function renderGallery(media) {
+      const loadingEl = document.getElementById('gallery-loading');
+      const emptyEl = document.getElementById('gallery-empty');
+      const galleryEl = document.getElementById('masonry-gallery');
+      const countEl = document.getElementById('media-count');
+      const statEl = document.getElementById('stat-media');
+      
+      loadingEl.style.display = 'none';
+      emptyEl.style.display = 'none';
+      galleryEl.style.display = '';
+      galleryEl.innerHTML = '';
+
+      const filtered = currentFilter === 'all' 
+        ? media 
+        : media.filter(m => m.type === currentFilter);
+
+      countEl.textContent = `${filtered.length} ${filtered.length === 1 ? 'item' : 'items'}`;
+
+      // Cool anime.js stats rolling counter up
+      const currentVal = parseInt(statEl.textContent) || 0;
+      if (currentVal !== media.length) {
+        anime({
+          targets: statEl,
+          innerHTML: [currentVal, media.length],
+          round: 1,
+          easing: 'easeOutExpo',
+          duration: 1500
+        });
+      }
+
+      if (filtered.length === 0) {
+        galleryEl.innerHTML = '<div style="text-align:center;padding:60px;column-span:all;"><p style="color:rgba(245,245,240,0.3);font-family:var(--font-mono);text-transform:uppercase">No items match this filter</p></div>';
+        return;
+      }
+
+      filtered.forEach((item, i) => {
+        const el = document.createElement('div');
+        el.className = 'gallery-item';
+        const revealDelay = Math.min(i * 40, 320);
+        el.style.transitionDelay = `${revealDelay}ms`;
+        if (i < EAGER_IMAGE_COUNT) el.classList.add('visible');
+
+        const path = item.path || (MEDIA_FOLDER + item.name);
+
+        if (item.type === 'video') {
+          el.innerHTML = `
+            <video class="gallery-video" src="${path}" muted loop preload="auto" playsinline></video>
+            <div class="video-badge">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+            <div class="gallery-overlay">
+              <div><div class="item-type">Video</div><div class="item-name">${cleanName(item.name)}</div></div>
+            </div>`;
+
+          const video = el.querySelector('.gallery-video');
+          
+          // Hover play preview with safety catch for autoplay restrictions/interrupts
+          el.addEventListener('mouseenter', () => {
+            video.play().catch(e => console.log("Video preview play interrupted:", e));
+          });
+          
+          el.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+          });
+        } else {
+          const loadAttrs = i < EAGER_IMAGE_COUNT
+            ? 'loading="eager" fetchpriority="high" decoding="async"'
+            : 'loading="lazy" decoding="async"';
+          el.innerHTML = `
+            <img class="gallery-img" src="${path}" alt="${cleanName(item.name)}" ${loadAttrs} />
+            <div class="gallery-overlay">
+              <div><div class="item-type">${getExt(item.name)}</div><div class="item-name">${cleanName(item.name)}</div></div>
+            </div>`;
+          const img = el.querySelector('.gallery-img');
+          const markLoaded = () => img.classList.add('is-loaded');
+          if (img.complete) markLoaded();
+          else {
+            img.addEventListener('load', markLoaded, { once: true });
+            img.addEventListener('error', markLoaded, { once: true });
+          }
+        }
+
+        el.addEventListener('click', () => openLightbox(i, filtered));
+        galleryEl.appendChild(el);
+      });
+
+      // Reveal items as they enter the viewport (skip observer for above-the-fold)
+      requestAnimationFrame(() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.05, rootMargin: '120px' });
+
+        galleryEl.querySelectorAll('.gallery-item:not(.visible)').forEach(el => observer.observe(el));
+      });
+    }
+
+    function showEmptyState() {
+      document.getElementById('gallery-loading').style.display = 'none';
+      document.getElementById('gallery-empty').style.display = '';
+      document.getElementById('masonry-gallery').style.display = 'none';
+    }
+
+    function cleanName(filename) {
+      return filename.replace(/\.[^.]+$/, '').replace(/[_-]/g, ' ').replace(/^\w/, c => c.toUpperCase());
+    }
+
+    function getExt(filename) {
+      return filename.split('.').pop().toUpperCase();
+    }
+
+    /* ── Filter Pills ── */
+    document.querySelectorAll('.filter-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentFilter = pill.dataset.filter;
+        renderGallery(allMedia);
+      });
+    });
+
+    /* ── Lightbox ── */
+    function openLightbox(index, items) {
+      lightboxIndex = index;
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const video = document.getElementById('lightbox-video');
+      const counter = document.getElementById('lightbox-counter');
+      const item = items[index];
+      const path = item.path || (MEDIA_FOLDER + item.name);
+
+      lightbox._items = items; // Save list for navigation
+
+      // Trigger premium fade-in/scale-up micro-interaction
+      img.style.animation = 'none';
+      video.style.animation = 'none';
+      img.offsetHeight; /* trigger browser reflow */
+      video.offsetHeight; /* trigger browser reflow */
+      img.style.animation = '';
+      video.style.animation = '';
+
+      if (item.type === 'video') {
+        img.style.display = 'none';
+        video.style.display = 'block';
+        video.src = path;
+        video.play().catch(e => console.log("Lightbox autoplay failed:", e));
+      } else {
+        video.style.display = 'none';
+        video.pause();
+        video.src = '';
+        img.style.display = 'block';
+        img.src = path;
+        img.alt = cleanName(item.name);
+      }
+
+      counter.textContent = `${index + 1} / ${items.length}`;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      
+      const video = document.getElementById('lightbox-video');
+      video.pause();
+      video.src = '';
+    }
+
+    function navLightbox(dir) {
+      const lightbox = document.getElementById('lightbox');
+      const items = lightbox._items || [];
+      if (!items.length) return;
+      
+      lightboxIndex = (lightboxIndex + dir + items.length) % items.length;
+      const item = items[lightboxIndex];
+      const path = item.path || (MEDIA_FOLDER + item.name);
+      
+      const img = document.getElementById('lightbox-img');
+      const video = document.getElementById('lightbox-video');
+      const counter = document.getElementById('lightbox-counter');
+
+      // Trigger premium fade-in/scale-up micro-interaction
+      img.style.animation = 'none';
+      video.style.animation = 'none';
+      img.offsetHeight; /* trigger browser reflow */
+      video.offsetHeight; /* trigger browser reflow */
+      img.style.animation = '';
+      video.style.animation = '';
+
+      if (item.type === 'video') {
+        img.style.display = 'none';
+        video.style.display = 'block';
+        video.src = path;
+        video.play().catch(e => console.log("Lightbox nav autoplay failed:", e));
+      } else {
+        video.style.display = 'none';
+        video.pause();
+        video.src = '';
+        img.style.display = 'block';
+        img.src = path;
+        img.alt = cleanName(item.name);
+      }
+      
+      counter.textContent = `${lightboxIndex + 1} / ${items.length}`;
+    }
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => navLightbox(-1));
+    document.getElementById('lightbox-next').addEventListener('click', () => navLightbox(1));
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
+    });
+
+    /* ── Init ── */
+    loadGallery();
+
+    /* ── Join Popup ── */
+    (function() {
+      const popup = document.getElementById('join-popup');
+      const closeBtn = document.getElementById('close-popup');
+      
+      setTimeout(() => {
+        if (!sessionStorage.getItem('join-popup-closed')) {
+          popup.classList.add('active');
+        }
+      }, 4000);
+
+      closeBtn.addEventListener('click', () => {
+        popup.classList.remove('active');
+        sessionStorage.setItem('join-popup-closed', 'true');
+        setTimeout(() => {
+          popup.style.display = 'none';
+        }, 500);
+      });
+    })();
+
+    
+  </script>
+
+  <!-- ── ENROLL MODAL ── -->
+  <div id="enroll-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-header">
+        <div class="modal-kicker">Join Cohort 04</div>
+        <h2>Secure your spot at <span>Braand School</span></h2>
+        <p>Submit your details and our team will get in touch with you shortly.</p>
+      </div>
+      <form id="enroll-form" class="modal-form">
+        <div class="form-group">
+          <label for="enroll-name">Full Name</label>
+          <input type="text" id="enroll-name" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-email">Email Address</label>
+          <input type="email" id="enroll-email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-phone">Contact Number</label>
+          <input type="tel" id="enroll-phone" name="phone" placeholder="+91 00000 00000" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-interest">Interested In</label>
+          <select id="enroll-interest" name="interest" required>
+            <option value="" disabled selected hidden>Select a Topic</option>
+            <option value="digital-marketing">Digital Marketing & E&#8209;Commerce</option>
+            <option value="graphic-design">Graphic Design & UI-UX</option>
+            <option value="video-editing">Video Editing & Motion Graphics</option>
+            <option value="others">Others</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+        </div>
+        <button type="submit" class="modal-submit-btn">Send Application</button>
+      </form>
+      <div id="form-success" class="form-success-msg" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Application Received!</h3>
+        <p>We'll contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* ─── MODAL STYLES ─────────────────────────────────── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-content {
+      background: #0d0d0d;
+      border: 1px solid #2e2e2e;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 480px;
+      padding: 48px;
+      position: relative;
+      transform: translateY(30px) scale(0.95);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(167, 254, 43, 0.05);
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: rgba(245, 245, 240, 0.4);
+      font-size: 32px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--green);
+    }
+
+    .modal-kicker {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .modal-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .modal-header h2 span {
+      color: var(--green);
+    }
+
+    .modal-header p {
+      font-size: 14px;
+      color: rgba(245, 245, 240, 0.5);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245, 245, 240, 0.3);
+    }
+
+    .form-group input,
+    .form-group select {
+      background: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green);
+    }
+
+    .modal-submit-btn {
+      margin-top: 12px;
+      background: var(--green);
+      color: var(--black);
+      border: none;
+      border-radius: 8px;
+      padding: 18px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .modal-submit-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .form-success-msg {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--green);
+      color: var(--black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 24px;
+    }
+
+    @media (max-width: 480px) {
+      .modal-content {
+        padding: 24px 20px;
+      }
+
+      .modal-form {
+        gap: 12px;
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 11px 14px !important;
+      }
+
+      .modal-submit-btn {
+        padding: 14px !important;
+        margin-top: 8px !important;
+      }
+
+      .modal-header h2 {
+        font-size: 26px;
+      }
+    }
+  
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+  <script>
+    (function () {
+      const modal = document.getElementById('enroll-modal');
+      const closeBtn = document.getElementById('modal-close');
+      const enrollButtons = document.querySelectorAll('.nav-cta, .mobile-menu-cta');
+      const enrollForm = document.getElementById('enroll-form');
+      const successMsg = document.getElementById('form-success');
+      const hasEnrollModal = modal && closeBtn && enrollForm && successMsg;
+
+      function openModal() {
+        if (!hasEnrollModal) return;
+        modal.style.display = 'flex';
+        setTimeout(() => {
+          modal.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (!hasEnrollModal) return;
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          modal.style.display = 'none';
+          enrollForm.style.display = 'flex';
+          successMsg.style.display = 'none';
+          enrollForm.reset();
+        }, 400);
+      }
+
+      enrollButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal();
+        });
+      });
+
+      if (hasEnrollModal) {
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        enrollForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = enrollForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+
+          setTimeout(() => {
+            if (typeof anime !== 'undefined') {
+              anime({
+                targets: enrollForm,
+                opacity: 0,
+                translateY: -20,
+                duration: 400,
+                easing: 'easeInQuad',
+                complete: () => {
+                  enrollForm.style.display = 'none';
+                  successMsg.style.display = 'block';
+
+                  anime.timeline()
+                    .add({ targets: successMsg, opacity: [0, 1], translateY: [20, 0], duration: 600, easing: 'easeOutQuad' })
+                    .add({ targets: successMsg.querySelector('.success-icon'), scale: [0, 1.2, 1], rotate: '1turn', duration: 800, easing: 'easeOutElastic(1, .5)' }, '-=400');
+                    
+                  submitBtn.textContent = originalText;
+                  submitBtn.disabled = false;
+                }
+              });
+            } else {
+               enrollForm.style.display = 'none';
+               successMsg.style.display = 'block';
+               submitBtn.textContent = originalText;
+               submitBtn.disabled = false;
+            }
+          }, 800);
+        });
+      }
+    })();
+  </script>
+
+  <style>
+    @media (max-width: 600px) {
+      .modal-form {
+        gap: 12px !important;
+      }
+      .modal-form .form-group {
+        gap: 6px !important;
+      }
+      .modal-form .form-group input,
+      .modal-form .form-group select {
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        height: auto !important;
+      }
+      .modal-form .modal-submit-btn {
+        padding: 14px !important;
+        margin-top: 8px !important;
+        font-size: 11px !important;
+      }
+      .modal-content {
+        padding: 24px 20px !important;
+      }
+    }
+  </style>
+
+
+  <style>
+    .custom-select-option:active,
+    .custom-select-option.touch-hover {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+    .custom-select-option.selected {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+  </style>
+
+</body>
+</html>
+
+

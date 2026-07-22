@@ -1,0 +1,106 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/podcast/:path*",
+      "destination": "/blogs/:path*"
+    },
+    {
+      "source": "/siliguri/:path*",
+      "destination": "/blogs/:path*"
+    },
+    {
+      "source": "/blog/siliguri-blog/:path*",
+      "destination": "/blogs/:path*"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blogs/:slug"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/course/graphic-design-course-siliguri",
+      "destination": "/courses/graphic-design-courses-siliguri"
+    },
+    {
+      "source": "/course/graphic-design-course",
+      "destination": "/courses/graphic-design-courses"
+    },
+    {
+      "source": "/course/video-motion-course-siliguri",
+      "destination": "/courses/video-editing-courses-siliguri"
+    },
+    {
+      "source": "/course/video-motion-course",
+      "destination": "/courses/video-editing-courses"
+    },
+    {
+      "source": "/course/digital-marketing-course-siliguri",
+      "destination": "/courses/digital-marketing-courses-siliguri"
+    },
+    {
+      "source": "/course/digital-marketing-course",
+      "destination": "/courses/digital-marketing-courses"
+    },
+    {
+      "source": "/course/ai-for-everyone-siliguri",
+      "destination": "/courses/ai-for-everyone-siliguri"
+    },
+    {
+      "source": "/course/ai-for-everyone",
+      "destination": "/courses/ai-for-everyone"
+    },
+    {
+      "source": "/course/ar-vr-course-siliguri",
+      "destination": "/courses/ar-vr-courses-siliguri"
+    },
+    {
+      "source": "/course/ar-vr-course",
+      "destination": "/courses/ar-vr-courses"
+    },
+    {
+      "source": "/course/the-digital-art-course-siliguri",
+      "destination": "/courses/the-digital-art-courses-siliguri"
+    },
+    {
+      "source": "/course/the-digital-art-course",
+      "destination": "/courses/the-digital-art-courses"
+    },
+    {
+      "source": "/course/the-ui-ux-design-course-siliguri",
+      "destination": "/courses/the-ui-ux-design-courses-siliguri"
+    },
+    {
+      "source": "/course/the-ui-ux-design-course",
+      "destination": "/courses/the-ui-ux-design-courses"
+    },
+    {
+      "source": "/course/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/course/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
+      "source": "/course/uploads/:path*",
+      "destination": "/uploads/:path*"
+    },
+    {
+      "source": "/courses/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/courses/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
+      "source": "/courses/uploads/:path*",
+      "destination": "/uploads/:path*"
+    }
+  ]
+}

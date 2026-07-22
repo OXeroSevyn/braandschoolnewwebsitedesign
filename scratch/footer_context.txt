@@ -1,0 +1,92 @@
+ 8px 24px rgba(163, 255, 0, 0.25);
+    }
+
+    .footer-apply-btn:hover .btn-badge {
+      background: var(--green) !important;
+      color: #000 !important;
+    }
+
+    @media (max-width: 1200px) {
+      .footer-card {
+        padding: 50px 60px;
+      }
+      .footer-main-grid {
+        gap: 50px 30px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .footer-main-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 40px;
+      }
+      .footer-brand-col {
+        grid-column: span 2;
+      }
+      .footer-contact-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+      .footer-bottom-right {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .unified-footer-wrapper {
+        padding: 60px 20px 80px;
+      }
+      .footer-card {
+        padding: 40px 0;
+        border-radius: 0;
+      }
+      .footer-main-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer-brand-col {
+        grid-column: span 1;
+      }
+      .footer-contact-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 30px 0;
+        padding: 30px 0;
+      }
+      .footer-bottom-right {
+        width: 100%;
+      }
+      .footer-apply-btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+
+  <!-- ── SITE FOOTER ── -->
+        <footer class="unified-footer-wrapper">
+    <div class="footer-bg-container"></div>
+    <div class="footer-card" style="position: relative; z-index: 2; padding: 0;">
+      <div class="premium-footer-bento">
+        
+        <!-- Brand Bento -->
+        <div class="bento-box footer-brand-bento">
+          <div class="brand-logo-icon" style="transform: scale(1.8); transform-origin: left center; margin-bottom: 36px;">
+            <div class="logo-box box-1"></div>
+            <div class="logo-box box-2"></div>
+            <div class="logo-box box-main">
+              <div class="logo-icon-text">B<span class="small-s">s</span></div>
+            </div>
+          </div>
+          <h3 class="pf-mission">The outcome-first school for the next generation of creative practitioners.</h3>
+          <p class="pf-desc">Run by active practitioners, structured around real client work.</p>
+          
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/braandschool/" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://www.linkedin.com/school/braandschool/posts/?feedView=all" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7

@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PL8DSP66');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Braand School</title>
+  <meta name="description" content="Reach out to us for any inquiries or assistance. To see what you can achieve! +91 9083596000 hello@braandschool.com 2nd Floor, Pradhan Building, Rishi Aurobindo Rd, Ward 12, Hakim Para, Siliguri, West Bengal 734001.">
+  <meta name="robots" content="max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://braandschool.com/contact-us/" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Braand School",
+  "url": "https://braandschool.com/contact/"
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Shared Resources -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="/assets/js/main.js" defer></script>
+
+  <style>
+    /* Contact Page Specific Styles - Modern Black Grid Redesign */
+    .contact-wrap {
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      background-color: #050505;
+      padding: 160px 0 80px;
+      overflow: hidden;
+    }
+
+    .contact-header,
+    .contact-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-left: 40px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+
+    .contact-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(5, 5, 5, 0) 10%, #050505 90%),
+        radial-gradient(rgba(167, 254, 43, 0.04) 1.5px, transparent 1.5px);
+      background-size: 100% 100%, 24px 24px;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .contact-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, transparent 50%, rgba(167, 254, 43, 0.08) 51%, transparent 55%);
+      background-size: 80px 80px;
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Pulsing Green Glow Backdrop for Contact Section */
+    .contact-bg-glow {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1100px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(167, 254, 43, 0.22) 0%, rgba(167, 254, 43, 0.07) 45%, transparent 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 1;
+      animation: pulsateGlowContact 10s ease-in-out infinite alternate;
+      will-change: transform, opacity;
+    }
+
+    @keyframes pulsateGlowContact {
+      0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+      100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1.2; }
+    }
+
+    .contact-header {
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #3b6600 !important;
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none !important;
+      padding: 8px 18px;
+      border-radius: 100px;
+      background: rgba(167, 254, 43, 0.15) !important;
+    }
+
+    .contact-kicker svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .contact-title {
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #ffffff !important;
+    }
+
+    .contact-title em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--green) !important;
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+      text-decoration: none !important;
+    }
+
+    .contact-title em::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 4px;
+      background: var(--green);
+      border-radius: 2px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Left Column Info */
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .contact-info-header {
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-info-desc {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7) !important;
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .contact-cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .contact-bento-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-left: 5px solid var(--green) !important;
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.01);
+    }
+
+    .contact-bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 10% 10%, rgba(167, 254, 43, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .contact-bento-card:hover {
+      background: #ffffff !important;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), 0 0 15px rgba(167, 254, 43, 0.08);
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      border-left: 5px solid var(--green) !important;
+    }
+
+    .contact-icon-wrapper {
+      width: 52px;
+      height: 52px;
+      background: rgba(167, 254, 43, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3b6600 !important;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .contact-icon-wrapper svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    .contact-bento-card:hover .contact-icon-wrapper {
+      background: var(--green);
+      color: #000000 !important;
+      border-color: var(--green);
+      transform: scale(1.05);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-card-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.45) !important;
+    }
+
+    .contact-details a,
+    .contact-details span:not(.contact-card-label) {
+      font-size: 18px;
+      font-weight: 600;
+      color: #080808 !important;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .contact-details a:hover {
+      color: #569400 !important;
+      text-decoration: none;
+    }
+
+    /* Right Column Form */
+    .contact-form-container {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03);
+      position: relative;
+      overflow: hidden;
+      color: #080808 !important;
+    }
+
+    .dot-matrix {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 6px;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .dot-matrix span {
+      width: 3px;
+      height: 3px;
+      background-color: var(--green);
+      border-radius: 50%;
+    }
+
+    .form-chat-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(167, 254, 43, 0.12);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3b6600;
+      margin-bottom: 12px;
+    }
+
+    .form-chat-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+
+    .contact-form-container h3 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+      color: #080808 !important;
+    }
+
+    .contact-form-container p {
+      font-size: 13.5px;
+      color: rgba(0, 0, 0, 0.5) !important;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .form-group-custom {
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group-custom label {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #333333 !important;
+    }
+
+    .form-group-custom input,
+    .form-group-custom textarea,
+    .form-group-custom .custom-select-trigger {
+      width: 100%;
+      background: #fafafa !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border-radius: 12px !important;
+      padding: 12px 16px !important;
+
+      color: #000000 !important;
+      font-size: 14.5px !important;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .form-group-custom input::placeholder,
+    .form-group-custom textarea::placeholder {
+      color: rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .form-group-custom input:focus,
+    .form-group-custom textarea:focus {
+      background: #ffffff !important;
+      border-color: var(--green) !important;
+      box-shadow: 0 0 0 4px rgba(167, 254, 43, 0.15) !important;
+    }
+
+    .form-group-custom textarea {
+      height: 70px;
+      resize: none;
+    }
+
+    .form-group-custom .custom-select-trigger span {
+      color: rgba(0, 0, 0, 0.45) !important;
+      font-family: var(--font-sans) !important;
+    }
+
+    .contact-form-container .popup-cta {
+      background: var(--green) !important;
+      color: #000000 !important;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 1px solid var(--green) !important;
+      border-radius: 12px !important;
+      padding: 12px 24px !important;
+      cursor: pointer;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.3s ease !important;
+      margin-top: 10px;
+    }
+
+    .contact-form-container .popup-cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-form-container .popup-cta:hover {
+      background: var(--green) !important;
+      box-shadow: 0 12px 30px rgba(167, 254, 43, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .contact-form-container .popup-cta:hover svg {
+      transform: translate(3px, -3px);
+    }
+
+    /* Map Section White Grid Styling */
+    .contact-map-section {
+      background-color: #ffffff;
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      padding: 95px 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 12;
+    }
+    
+    .light-kicker {
+      color: rgba(0, 0, 0, 0.6) !important;
+      border: 1px solid rgba(0, 0, 0, 0.15) !important;
+      background: rgba(0, 0, 0, 0.02) !important;
+    }
+
+    .contact-map-section .map-container {
+      max-width: 1320px;
+      margin: 40px auto 0 !important;
+      border-radius: 24px;
+      border: 1.5px solid #000000 !important;
+      overflow: hidden;
+      height: 480px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+    
+    .contact-map-section .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(1) contrast(1.1) brightness(1.02);
+      opacity: 0.9;
+      transition: filter 0.5s ease, opacity 0.5s ease;
+    }
+    
+    .contact-map-section .map-container:hover iframe {
+      filter: grayscale(0) contrast(1) brightness(1);
+      opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .contact-wrap {
+        padding-top: 120px;
+      }
+      .contact-cards-container {
+        margin-top: 40px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .apply-grid {
+        gap: 24px;
+      }
+      .apply-desc {
+        margin: 0 auto 16px;
+      }
+      .contact-info-header,
+      .contact-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .contact-wrap {
+        padding-top: 100px;
+      }
+      .contact-bento-card {
+        padding: 16px 20px !important;
+        gap: 16px !important;
+      }
+      .contact-icon-wrapper {
+        width: 44px !important;
+        height: 44px !important;
+      }
+      .contact-icon-wrapper svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+      .contact-details {
+        min-width: 0 !important;
+        flex: 1 !important;
+      }
+      .contact-details a,
+      .contact-details span:not(.contact-card-label) {
+        font-size: 15px !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.4 !important;
+      }
+      .contact-form-container {
+        padding: 32px 24px;
+      }
+      .map-container {
+        height: 320px;
+        max-width: calc(100% - 40px);
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+      }
+    }
+
+    /* Reuse bento style in manifesto footer */
+    .unified-footer-wrapper {
+      background: #060606;
+      padding: 80px 40px 120px;
+      position: relative;
+      overflow: hidden;
+      font-family: inherit;
+    }
+
+    .footer-bg-container {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 25%),
+                  radial-gradient(circle at 50% 100%, rgba(167, 254, 43, 0.15) 0%, rgba(167, 254, 43, 0.05) 50%, #050505 80%);
+      background-color: #050505;
+    }
+
+    .footer-bg-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.15;
+      mix-blend-mode: overlay;
+    }
+
+    .footer-bg-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(167, 254, 43, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 254, 43, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .footer-card {
+      max-width: 1300px;
+      margin: 0 auto;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+    
+    .premium-footer-bento {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .bento-box {
+      /* Box styling removed as requested */
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .footer-brand-bento {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 450px;
+    }
+    
+    .pf-mission {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+    
+    .pf-desc {
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0 0 30px 0;
+    }
+    
+    .pf-socials {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .pf-social-btn {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(144, 244, 18, 0.4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      transition: all 0.3s ease;
+    }
+    
+    .pf-social-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1.5;
+    }
+    
+    .pf-social-btn:hover {
+      background: var(--green);
+      color: #000;
+      border-color: var(--green);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(144, 244, 18, 0.2);
+    }
+    
+    .footer-links-bento {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .pf-nav-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+    
+    .pf-nav-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .pf-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    
+    .pf-link:hover {
+      color: #fff;
+      transform: translateX(4px);
+    }
+    
+    .pf-arr {
+      font-size: 14px;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .pf-link:hover .pf-arr {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .footer-contact-bento {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .pf-contact-item {
+      display: flex;
+      
+      gap: 16px;
+    }
+    
+    .pf-contact-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #d4ff70, #90F412);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pf-contact-icon::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.6;
+    }
+    
+    .pf-contact-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #111;
+      stroke-width: 2;
+      fill: none;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .pf-contact-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .pf-contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #a7fe2b;
+    }
+    
+    .pf-contact-text a, .pf-contact-text span:not(.pf-contact-label) {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    
+
+    
+    .pf-footer-bottom {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .pf-fb-left {
+      color: rgba(255,255,255,0.3);
+      font-size: 13px;
+    }
+    
+    .pf-apply-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .pf-apply-btn:hover {
+      color: var(--green);
+    }
+    
+    .pf-btn-badge {
+      background: #fff;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 800;
+      transition: all 0.3s ease;
+    }
+    
+    .pf-apply-btn:hover .pf-btn-badge {
+      background: var(--green);
+    }
+    
+    @media (max-width: 900px) {
+      .premium-footer-bento {
+        grid-template-columns: 1fr;
+      }
+      .bento-box {
+        padding: 30px;
+      }
+    }
+    @media (max-width: 600px) {
+      .apply-grid {
+        gap: 24px;
+      }
+      .apply-desc {
+        margin: 0 auto 16px;
+      }
+      .unified-footer-wrapper {
+        padding: 24px 16px 16px !important;
+        margin-top: 40px !important;
+      }
+      .premium-footer-bento {
+        gap: 16px !important;
+      }
+      .premium-footer-bento .bento-box {
+        padding: 20px !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        border-radius: 16px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .footer-brand-bento .brand-logo-icon {
+        transform: scale(1.3) !important;
+        margin-bottom: 20px !important;
+        transform-origin: left center !important;
+      }
+      .pf-mission {
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.3 !important;
+      }
+      .pf-desc {
+        font-size: 13px !important;
+        margin-bottom: 16px !important;
+      }
+      .pf-socials {
+        gap: 10px !important;
+      }
+      .pf-social-btn {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 10px !important;
+      }
+      .pf-social-btn svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+      .footer-links-bento {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+      }
+      .pf-nav-col {
+        gap: 12px !important;
+      }
+      .pf-nav-header {
+        font-size: 10px !important;
+        margin-bottom: 4px !important;
+      }
+      .pf-link {
+        font-size: 14px !important;
+      }
+      .footer-contact-bento {
+        gap: 14px !important;
+      }
+      .pf-contact-item {
+        gap: 12px !important;
+      }
+      .pf-contact-icon {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 10px !important;
+      }
+      .pf-contact-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+      .pf-contact-text {
+        gap: 2px !important;
+      }
+      .pf-contact-text a, .pf-contact-text span {
+        font-size: 13px !important;
+      }
+      .pf-footer-bottom {
+        margin-top: 16px !important;
+        padding-top: 16px !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        gap: 16px !important;
+        text-align: center !important;
+      }
+      .pf-fb-left {
+        font-size: 12px !important;
+        color: rgba(255,255,255,0.4) !important;
+      }
+      .pf-fb-right {
+        width: 100% !important;
+      }
+      .footer-apply-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+      }
+    }
+
+    /* Loader Styles */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #080808;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loader.hide {
+      animation: loaderOut 0.5s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes loaderOut {
+      to {
+        opacity: 0;
+      }
+    }
+
+    .loader-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: min(400px, 88vw);
+    }
+
+    .loader-inner .brand-logo-icon {
+      width: 300px;
+      height: 140px;
+      margin-bottom: 10px;
+      background-position: center bottom;
+      display: block; /* Ensure it is shown in the loader */
+    }
+
+    .loader-logo {
+      display: none;
+    }
+
+    .loader-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: rgba(167, 254, 43, 0.6);
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    .loader-bar-track {
+      width: 100%;
+      height: 2px;
+      background: rgba(167, 254, 43, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loader-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #a7fe2b;
+      box-shadow: 0 0 12px rgba(167, 254, 43, 0.8);
+      transition: width 0.1s linear;
+    }
+
+    .loader-pct {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(167, 254, 43, 0.35);
+      letter-spacing: 0.1em;
+      align-self: flex-end;
+    }
+  
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8DSP66"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Background System -->
+  <div class="bg-system">
+    <div class="bg-glow"></div>
+    <div class="bg-pattern"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="brand-logo-icon">
+        <div class="logo-box box-1"></div>
+        <div class="logo-box box-2"></div>
+        <div class="logo-box box-main">
+          <div class="logo-icon-text">B<span class="small-s">s</span></div>
+        </div>
+      </div>
+      <div class="loader-tagline" id="loader-tagline"></div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const loader = document.getElementById('loader');
+      const bar = document.getElementById('loader-bar-fill');
+      const pctEl = document.getElementById('loader-pct');
+      const taglineEl = document.getElementById('loader-tagline');
+      
+      const taglines = [
+        "Thinking over Tools.",
+        "Outcome over Output.",
+        "Doing over Dreaming.",
+        "Practitioners over Professors."
+      ];
+      
+      const selectedTagline = taglines[Math.floor(Math.random() * taglines.length)];
+      
+      let index = 0;
+      const holdAfter = 600;
+      const typeSpeed = 25;
+      const totalTypingTime = selectedTagline.length * typeSpeed;
+
+      function typeTagline() {
+        if (!taglineEl) return;
+        if (index < selectedTagline.length) {
+          taglineEl.textContent += selectedTagline.charAt(index);
+          index++;
+          setTimeout(typeTagline, typeSpeed);
+        }
+      }
+
+      if (taglineEl) taglineEl.textContent = '';
+      setTimeout(typeTagline, 100);
+
+      let pct = 0;
+      const pctInterval = setInterval(() => {
+        pct += Math.floor(Math.random() * 8) + 2;
+        if (pct >= 100) {
+          pct = 100;
+          clearInterval(pctInterval);
+        }
+        if (bar) bar.style.width = pct + '%';
+        if (pctEl) pctEl.textContent = pct + '%';
+      }, 50);
+
+      function hideLoader() {
+        clearInterval(pctInterval);
+        if (bar) bar.style.width = '100%';
+        if (pctEl) pctEl.textContent = '100%';
+        setTimeout(() => {
+          loader.classList.add('hide');
+          document.body.style.overflow = '';
+          setTimeout(() => loader.style.display = 'none', 500);
+        }, holdAfter);
+      }
+
+      setTimeout(hideLoader, totalTypingTime + 200);
+      setTimeout(hideLoader, 3500);
+    })();
+  </script>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/index.html" class="nav-logo">
+      <div class="brand-logo-icon">
+        <div class="logo-box box-1"></div>
+        <div class="logo-box box-2"></div>
+        <div class="logo-box box-main">
+          <div class="logo-icon-text">B<span class="small-s">s</span></div>
+        </div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li class="nav-dropdown-wrapper">
+        <div style="display: flex; align-items: center; gap: 4px;">
+          <a href="/courses" class="nav-courses-link" style="padding-right: 0;">
+            Our Courses
+          </a>
+          <button type="button" class="nav-dropdown-toggle" id="desktop-courses-toggle" aria-label="Toggle Courses Dropdown" style="background: none; border: none; color: inherit; cursor: pointer; padding: 4px; display: flex; align-items: center; opacity: 0.7; transition: opacity 0.2s;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" id="desktop-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri">Digital Marketing Course</a>
+        </div>
+      </li>
+      <style>
+        .nav-dropdown-wrapper {
+          position: relative;
+        }
+        .nav-dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%) translateY(10px);
+          margin-top: 25px;
+          background: rgba(15, 15, 15, 0.95);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          min-width: 200px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          z-index: 200;
+        }
+        .nav-dropdown-menu.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown-menu a {
+          padding: 10px 16px !important;
+          color: var(--white);
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          border-radius: 8px;
+          transition: background 0.2s, opacity 0.2s;
+          opacity: 0.8;
+          display: block;
+        }
+        .nav-dropdown-menu a:hover {
+          background: rgba(255, 255, 255, 0.1);
+          opacity: 1;
+        }
+        .nav-dropdown-toggle:hover {
+          opacity: 1 !important;
+        }
+      
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggleBtn = document.getElementById('desktop-courses-toggle');
+          const submenu = document.getElementById('desktop-courses-submenu');
+          if (toggleBtn && submenu) {
+            toggleBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              submenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+              if (!submenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                submenu.classList.remove('open');
+              }
+            });
+          }
+        });
+      </script>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html">Our Blogs</a></li>
+      <li><a href="/contact-us/">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="nav-cta">Enroll Now</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="nav-logo">
+        <div class="brand-logo-icon">
+          <div class="logo-box box-1"></div>
+          <div class="logo-box box-2"></div>
+          <div class="logo-box box-main">
+            <div class="logo-icon-text">B<span class="small-s">s</span></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="mobile-menu-close" style="background:none; border:none; color:var(--white); padding: 5px; cursor: pointer;">
+        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="/index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown-group">
+        <div class="mobile-nav-item-wrap">
+          <a href="/courses" class="mobile-nav-item" id="mobile-courses-link">Courses</a>
+          <button type="button" class="mobile-nav-toggle" id="mobile-courses-toggle" aria-label="Toggle Courses">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mobile-submenu" id="mobile-courses-submenu">
+          <a href="/courses/graphic-design-course-siliguri" class="mobile-sub-item">Graphic Design Course</a>
+          <a href="/courses/video-motion-course-siliguri" class="mobile-sub-item">Video Editing Course</a>
+          <a href="/courses/digital-marketing-course-siliguri" class="mobile-sub-item">Digital Marketing Course</a>
+        </div>
+      </div>
+
+      <a href="/gallery.html" class="mobile-nav-item">Gallery</a>
+      <a href="/blog.html" class="mobile-nav-item">Our Blogs</a>
+      <a href="/contact-us/" class="mobile-nav-item accent">Contact</a>
+      <button type="button" class="mobile-menu-cta" style="margin-top:20px;">Enroll Now</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const coursesToggle = document.getElementById('mobile-courses-toggle');
+      const coursesSubmenu = document.getElementById('mobile-courses-submenu');
+
+      if(hamburger && mobileMenu) {
+        hamburger.addEventListener('click', (e) => {
+          e.preventDefault();
+          mobileMenu.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      }
+
+      if(mobileMenuClose && mobileMenu) {
+        mobileMenuClose.addEventListener('click', (e) => {
+          e.preventDefault();
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+
+      if(coursesToggle) {
+        coursesToggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          coursesToggle.classList.toggle('open');
+          coursesSubmenu.classList.toggle('open');
+        });
+      }
+
+      const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-item, .mobile-sub-item');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (link.id !== 'mobile-courses-link') {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Contact Form & Details Section -->
+  <main class="contact-wrap">
+    <div class="contact-bg-glow"></div>
+    <div class="contact-grid">
+      <!-- Info Column -->
+      <div class="contact-info-panel">
+        <div class="contact-info-header">
+          <span class="contact-kicker">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Connect with practitioners
+          </span>
+          <h1 class="contact-title">Let's start a <br><em>conversation.</em></h1>
+        </div>
+
+        <p class="contact-info-desc">
+          Have a question about our cohorts, curriculum, or admissions process? Reach out directly and one of our mentors will get in touch with you.
+        </p>
+        
+        <div class="contact-cards-container">
+          <!-- Card 1: Call -->
+          <div class="contact-bento-card">
+            <div class="contact-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-card-label">Call or WhatsApp</span>
+              <a href="tel:+919083596000">+91 90835-96000</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Email -->
+          <div class="contact-bento-card">
+            <div class="contact-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-card-label">Email Us</span>
+              <a href="mailto:hello@braandschool.com">hello@braandschool.com</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Address -->
+          <div class="contact-bento-card">
+            <div class="contact-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-card-label">Visit the School</span>
+              <span>2nd Floor, Pradhan Building, Rishi Aurobindo Rd, Ward 12, Hakim Para, Siliguri, West Bengal 734001</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="contact-form-container">
+        <!-- Dot Matrix Decoration -->
+        <div class="dot-matrix">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="form-chat-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </div>
+
+        <h3>Submit an Inquiry</h3>
+        <p>Fill out the form below and we will get back to you within 24 hours.</p>
+
+        <form id="contact-page-form" class="enrollment-form">
+          <div class="form-group-custom">
+            <label for="c-name">Full Name</label>
+            <input type="text" id="c-name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group-custom">
+            <label for="c-email">Email Address</label>
+            <input type="email" id="c-email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group-custom">
+            <label for="c-phone">Contact Number</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="+91 00000 00000" required>
+          </div>
+          <div class="form-group-custom">
+            <label for="c-interest">Interested In</label>
+            <select id="c-interest" name="interest" required>
+              <option value="" disabled selected hidden>Select a Topic</option>
+              <option>Digital Marketing & E&#8209;Commerce</option>
+              <option>Graphic Design & UI-UX</option>
+              <option>Video Editing & Motion Graphics</option>
+              <option>Others</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+          <button type="submit" class="popup-cta">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </button>
+        </form>
+        
+        <div id="contact-success-msg" class="form-success-msg" style="display: none; text-align: center;">
+          <div class="success-icon" style="width: 50px; height: 50px; background: var(--green); color: var(--black); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">✓</div>
+          <h3>Message Sent!</h3>
+          <p>We'll get back to you on WhatsApp or Email within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Map Section (White Grid) -->
+  <section class="contact-map-section">
+    <div class="contact-header" style="max-width: 1320px; margin: 0 auto; padding-left: 0; padding-right: 0;">
+      <span class="contact-kicker light-kicker">Location</span>
+      <h2 style="font-weight: 700; margin-bottom: 8px; color: #080808">Find us in Siliguri</h2>
+      <p style="color: rgba(0,0,0,0.6); max-width: 500px; margin-bottom: 0">Centrally located on Rishi Aurobindo Road. Hover on the map to activate color view.</p>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Braand+School+-+Learn+Marketing+%7C+UI+UX+Design+%7C+Graphic+Design+Course+in+Siliguri&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="unified-footer-wrapper">
+    <div class="footer-bg-container"></div>
+    <div class="footer-card" style="position: relative; z-index: 2; padding: 0;">
+      <div class="premium-footer-bento">
+        
+        <!-- Brand Bento -->
+        <div class="bento-box footer-brand-bento">
+          <div class="brand-logo-icon" style="transform: scale(1.8); transform-origin: left center; margin-bottom: 36px;">
+            <div class="logo-box box-1"></div>
+            <div class="logo-box box-2"></div>
+            <div class="logo-box box-main">
+              <div class="logo-icon-text">B<span class="small-s">s</span></div>
+            </div>
+          </div>
+          <h3 class="pf-mission">The outcome-first school for the next generation of creative practitioners.</h3>
+          <p class="pf-desc">Run by active practitioners, structured around real client work.</p>
+          
+          <div class="pf-socials">
+            <a href="https://www.instagram.com/braandschool/" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://www.linkedin.com/school/braandschool/posts/?feedView=all" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.youtube.com/@braandschool" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://wa.me/919083596000" target="_blank" class="pf-social-btn"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Links Bento -->
+        <div class="bento-box footer-links-bento">
+          <div class="pf-nav-col">
+            <div class="pf-nav-header">Course Topics</div>
+            <a href="/courses/digital-marketing-course-siliguri" class="pf-link">Digital Marketing Course</a>
+            <a href="/courses/graphic-design-course-siliguri" class="pf-link">Graphic Design Course</a>
+            <a href="/courses/video-motion-course-siliguri" class="pf-link">Video Editing Course</a>
+          </div>
+          <div class="pf-nav-col">
+            <a href="/blog.html" class="pf-nav-header" style="color: var(--green); text-decoration: none; display: block;">Others</a>
+            <a href="https://braandschool.com/course/blog/brand-story/" class="pf-link">Brand Stories</a>
+            <a href="https://braandschool.com/course/podcast/" class="pf-link">Podcasts</a>
+            <a href="https://braandschool.com/course/updates/" class="pf-link">BS Updates</a>
+            <a href="braandschool_com%20Privacy%20Policy.html" class="pf-link">Privacy Policy</a>
+            <a href="index.html#apply" class="pf-link" style="color: var(--green);">Apply Now <span class="pf-arr">↗</span></a>
+          </div>
+        </div>
+
+        <!-- Contact Bento -->
+        <div class="bento-box footer-contact-bento">
+          <div class="pf-nav-header">Contact</div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Call Us</span>
+              <a href="tel:+919083596000">+91 90835-96000</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Email Us</span>
+              <a href="mailto:hello@braandschool.com">hello@braandschool.com</a>
+            </div>
+          </div>
+          <div class="pf-contact-item">
+            <div class="pf-contact-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="pf-contact-text">
+              <span class="pf-contact-label">Address</span>
+              <span>2nd Floor, Pradhan Building,<br>Rishi Aurobindo Rd, Ward 12,<br>Hakim Para, Siliguri,<br>West Bengal 734001</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pf-footer-bottom">
+        <div class="pf-fb-left">© 2026 Braand School · All rights reserved</div>
+        <div class="pf-fb-right">
+          <a target="_blank" href="https://www.google.com/maps?q=Braand+School+-+Learn+Marketing+%7C+UI+UX+Design+%7C+Graphic+Design+Course+in+Siliguri" class="footer-apply-btn" style="background: var(--green); color: #000; padding: 12px 16px 12px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.3s ease;">
+            Get Direction
+            <span class="btn-badge" style="display: inline-block; background: #000; color: var(--green); padding: 8px 16px; border-radius: 100px; font-size: 11px; font-weight: 800;">MAP</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enroll Modal -->
+  <div id="enroll-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-header">
+        <div class="modal-kicker">Join Cohort 04</div>
+        <h2>Secure your spot at <span>Braand School</span></h2>
+        <p>Submit your details and our team will get in touch with you shortly.</p>
+      </div>
+      <form id="enroll-form" class="modal-form">
+        <div class="form-group">
+          <label for="enroll-name">Full Name</label>
+          <input type="text" id="enroll-name" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-email">Email Address</label>
+          <input type="email" id="enroll-email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-phone">Contact Number</label>
+          <input type="tel" id="enroll-phone" name="phone" placeholder="+91 00000 00000" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-interest">Interested In</label>
+          <select id="enroll-interest" name="interest" required>
+            <option value="" disabled selected hidden>Select a Topic</option>
+            <option value="digital-marketing">Digital Marketing & E&#8209;Commerce</option>
+            <option value="graphic-design">Graphic Design & UI-UX</option>
+            <option value="video-editing">Video Editing & Motion Graphics</option>
+            <option value="others">Others</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+        </div>
+        <button type="submit" class="modal-submit-btn">Send Application</button>
+      </form>
+      <div id="form-success" class="form-success-msg" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Application Received!</h3>
+        <p>We'll contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .modal-content {
+      background: #0d0d0d;
+      border: 1px solid #2e2e2e;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 480px;
+      padding: 48px;
+      position: relative;
+      transform: translateY(30px) scale(0.95);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(167, 254, 43, 0.05);
+    }
+    .modal-overlay.active .modal-content {
+      transform: translateY(0) scale(1);
+    }
+    .modal-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: rgba(245, 245, 240, 0.4);
+      font-size: 32px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .modal-close:hover {
+      color: var(--green);
+    }
+    .modal-kicker {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .modal-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .modal-header h2 span {
+      color: var(--green);
+    }
+    .modal-header p {
+      font-size: 14px;
+      color: rgba(245, 245, 240, 0.5);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .modal-submit-btn {
+      margin-top: 12px;
+      background: var(--green);
+      color: var(--black);
+      border: none;
+      border-radius: 8px;
+      padding: 18px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .modal-submit-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .form-success-msg {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--green);
+      color: var(--black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 24px;
+    }
+  
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked {
+      background-color: #bcff00 !important;
+      background: linear-gradient(#bcff00, #bcff00) !important;
+      box-shadow: 0 0 10px 100px #bcff00 inset !important;
+      color: #000 !important;
+    }
+
+</style>
+
+  <script>
+    // Header & Modal Script
+    (function () {
+      const modal = document.getElementById('enroll-modal');
+      const closeBtn = document.getElementById('modal-close');
+      const enrollButtons = document.querySelectorAll('.nav-cta, .mobile-menu-cta');
+      const enrollForm = document.getElementById('enroll-form');
+      const successMsg = document.getElementById('form-success');
+      const hasEnrollModal = modal && closeBtn && enrollForm && successMsg;
+
+      function openModal() {
+        if (!hasEnrollModal) return;
+        modal.style.display = 'flex';
+        setTimeout(() => {
+          modal.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (!hasEnrollModal) return;
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          modal.style.display = 'none';
+          enrollForm.style.display = 'flex';
+          successMsg.style.display = 'none';
+          enrollForm.reset();
+        }, 400);
+      }
+
+      enrollButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal();
+        });
+      });
+
+      if (hasEnrollModal) {
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+    })();
+  </script>
+
+  <!-- Contact Form Submission Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cForm = document.getElementById('contact-page-form');
+      const cSuccess = document.getElementById('contact-success-msg');
+      if (cForm && cSuccess) {
+        cForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          if (typeof window.handleFormSubmit !== 'undefined') {
+            // Use global unified logic if available
+            await window.handleFormSubmit(cForm, cSuccess, 'Contact Page');
+            return;
+          }
+
+          // Fallback if index.html's handler isn't exposed yet
+          const formData = new FormData(cForm);
+          const name = formData.get('name') || 'N/A';
+          const email = formData.get('email') || 'N/A';
+          const phone = formData.get('phone') || 'N/A';
+          const interest = formData.get('interest') || 'N/A';
+
+          const payload = {
+            username: "Braand School Leads",
+            embeds: [{
+              title: "🚀 New Lead: Contact Page",
+              color: 11009579,
+              fields: [
+                { name: "👤 Full Name", value: `**${name}**`, inline: true },
+                { name: "✉️ Email Address", value: `**${email}**`, inline: true },
+                { name: "📞 Phone Number", value: `**${phone}**`, inline: true },
+                { name: "💡 Interested In", value: `**${interest}**`, inline: false },
+                { name: "📄 Source Page", value: `\`${window.location.pathname || '/'}\``, inline: true }
+              ],
+              timestamp: new Date().toISOString(),
+              footer: { text: "Braand School Contact Page" }
+            }]
+          };
+
+          const submitBtn = cForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+
+          try {
+            await fetch('/api/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+
+            anime({
+              targets: cForm,
+              opacity: 0,
+              translateY: -20,
+              duration: 400,
+              easing: 'easeInQuad',
+              complete: () => {
+                cForm.style.display = 'none';
+                cSuccess.style.display = 'block';
+                anime({
+                  targets: cSuccess,
+                  opacity: [0, 1],
+                  translateY: [20, 0],
+                  duration: 600,
+                  easing: 'easeOutQuad'
+                });
+              }
+            });
+          } catch (err) {
+            console.error('Error submitting contact form:', err);
+            alert('Something went wrong. Please try again.');
+          } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Animations -->
+  <script>
+    anime({
+      targets: '.contact-header, .contact-grid, .map-container',
+      opacity: [0, 1],
+      translateY: [40, 0],
+      delay: anime.stagger(150),
+      duration: 1000,
+      easing: 'easeOutQuart'
+    });
+  </script>
+
+  <style>
+    @media (max-width: 600px) {
+      .modal-form {
+        gap: 12px !important;
+      }
+      .modal-form .form-group {
+        gap: 6px !important;
+      }
+      .modal-form .form-group input,
+      .modal-form .form-group select {
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        height: auto !important;
+      }
+      .modal-form .modal-submit-btn {
+        padding: 14px !important;
+        margin-top: 8px !important;
+        font-size: 11px !important;
+      }
+      .modal-content {
+        padding: 24px 20px !important;
+      }
+    }
+  </style>
+
+
+  <style>
+    .custom-select-option:active,
+    .custom-select-option.touch-hover {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+    .custom-select-option.selected {
+      background: #bcff00 !important;
+      color: #000 !important;
+    }
+  </style>
+
+</body>
+
+</html>
